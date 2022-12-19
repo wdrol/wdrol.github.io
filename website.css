@@ -1,0 +1,111 @@
+
+body
+{
+    padding: 30px;
+    color: black;
+    margin: 0 auto;
+    font-size: 18px;
+    max-width: 980px;
+    font-weight: 400;
+    background: white;
+    font-family: Raleway, sans-serif;
+}
+
+@media( max-width: 990px )
+{
+    body
+    {
+        font-size: 16px;
+    }
+}
+
+h1 , h2 , h3 , h4 , .h1 , .h2 , .h3 , .h4
+{
+    margin: 0;
+}
+
+h1 , .h1
+{
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+h2 , .h2
+{
+    font-weight: 300;
+    font-size: 2.25rem;
+}
+
+h3 , .h3
+{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h4 , .h4
+{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+@media( max-width: 990px )
+{
+    h1 , .h1
+    {
+        font-size: 2rem;
+    }
+
+    h2 , .h2
+    {
+        font-size: 1.75rem;
+    }
+
+    h3 , .h3
+    {
+        font-size: 1.5rem;
+    }
+
+    h4 , .h4
+    {
+        font-size: 1.12rem;
+    }
+}
+
+section
+{
+    padding: 2.5rem;
+    background: white;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    border: .3rem dashed #ddd;
+}
+
+section:last-child
+{
+    margin-bottom: 0;
+}
+
+@media( max-width: 990px )
+{
+    section
+    {
+        padding: 2.25rem 1.25rem;
+    }
+}
+
+header
+{
+    margin-bottom: 2rem;
+}
+
+.logo
+{
+    width: 100%;
+    height: auto;
+    max-width: 4rem;
+}
+
+.center
+{
+    text-align: center;
+}

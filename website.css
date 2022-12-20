@@ -5,8 +5,8 @@ body
     color: black;
     margin: 0 auto;
     font-size: 18px;
-    max-width: 980px;
     font-weight: 400;
+    max-width: 1020px;
     background: white;
     font-family: Raleway, sans-serif;
 }
@@ -27,18 +27,18 @@ h1 , h2 , h3 , h4 , .h1 , .h2 , .h3 , .h4
 h1 , .h1
 {
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 h2 , .h2
 {
     font-weight: 300;
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 h3 , .h3
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 
@@ -73,7 +73,8 @@ h4 , .h4
 
 section
 {
-    padding: 2.5rem;
+    padding: 2.25rem 3rem;
+    margin-top: 3rem;
     background: white;
     border-radius: 2rem;
     margin-bottom: 3rem;
@@ -95,17 +96,74 @@ section:last-child
 
 header
 {
+    margin-bottom: 3rem;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+a
+{
+    color: #77f;
+}
+
+nav a
+{
+    color: black;
+    margin-left: 1rem;
+}
+
+a.logo-link
+{
+    color: black;
+    text-decoration: none;
+}
+
+p
+{
     margin-bottom: 2rem;
 }
 
 .logo
 {
-    width: 100%;
-    height: auto;
-    max-width: 4rem;
+    max-width: 3.25rem;
 }
 
 .center
 {
+    text-align: center;
+}
+
+.flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-sample
+{
+    margin-bottom: 3rem;
+}
+
+.work-sample:last-child
+{
+    margin-bottom: 0;
+}
+
+.work-sample img
+{
+    border-radius: .4rem;
+    border: 1px solid #ddd;
+}
+
+.work-sample .caption
+{
+    color: #555;
+    display: block;
+    margin-top: .5rem;
     text-align: center;
 }

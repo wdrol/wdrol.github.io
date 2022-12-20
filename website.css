@@ -1,12 +1,10 @@
 
 body
 {
-    padding: 30px;
+    margin: 0;
     color: black;
-    margin: 0 auto;
     font-size: 18px;
     font-weight: 400;
-    max-width: 1020px;
     background: white;
     font-family: Raleway, sans-serif;
 }
@@ -17,6 +15,19 @@ body
     {
         font-size: 16px;
     }
+}
+
+main , header
+{
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
+header
+{
+    padding-top: 1rem;
+    padding-bottom: 0;
 }
 
 h1 , h2 , h3 , h4 , .h1 , .h2 , .h3 , .h4
@@ -94,11 +105,6 @@ section:last-child
     }
 }
 
-header
-{
-    margin-bottom: 3rem;
-}
-
 img
 {
     width: 100%;
@@ -112,14 +118,17 @@ a
 
 nav a
 {
-    color: black;
     margin-left: 1rem;
 }
 
 a.logo-link
 {
-    color: black;
     text-decoration: none;
+}
+
+nav a , a.logo-link , footer a
+{
+    color: black;
 }
 
 p
@@ -165,5 +174,13 @@ p
     color: #555;
     display: block;
     margin-top: .5rem;
+    text-align: center;
+}
+
+footer
+{
+    padding: 4rem;
+    margin-top: 2rem;
+    background: #ddd;
     text-align: center;
 }

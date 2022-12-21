@@ -84,12 +84,11 @@ h4 , .h4
 
 section
 {
-    padding: 2.25rem 3rem;
     margin-top: 3rem;
+    padding: 2.5rem 0;
     background: white;
-    border-radius: 2rem;
     margin-bottom: 3rem;
-    border: .3rem dashed #ddd;
+    border-top: .35rem dashed #ddd;
 }
 
 section:last-child
@@ -101,7 +100,7 @@ section:last-child
 {
     section
     {
-        padding: 2.25rem 1.25rem;
+        padding: 2.25rem 1rem;
     }
 }
 
@@ -165,7 +164,7 @@ p
 
 .work-sample img
 {
-    border-radius: .4rem;
+    border-radius: .3rem;
     border: 1px solid #ddd;
 }
 

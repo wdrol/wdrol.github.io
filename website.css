@@ -104,6 +104,19 @@ section:last-child
     }
 }
 
+.half-width
+{
+    width: 50%;
+}
+
+@media( max-width: 990px )
+{
+    .half-width
+    {
+        width: inherit;
+    }
+}
+
 img
 {
     width: 100%;

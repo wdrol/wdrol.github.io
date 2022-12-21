@@ -5,16 +5,9 @@ body
     color: black;
     font-size: 18px;
     font-weight: 400;
+    line-height: 2rem;
     background: white;
     font-family: Raleway, sans-serif;
-}
-
-@media( max-width: 990px )
-{
-    body
-    {
-        font-size: 16px;
-    }
 }
 
 main , header
@@ -33,59 +26,33 @@ header
 h1 , h2 , h3 , h4 , .h1 , .h2 , .h3 , .h4
 {
     margin: 0;
+    font-weight: 300;
 }
 
 h1 , .h1
 {
-    font-weight: 400;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 h2 , .h2
 {
-    font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 h3 , .h3
 {
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 1.5rem;
 }
 
 h4 , .h4
 {
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-
-@media( max-width: 990px )
-{
-    h1 , .h1
-    {
-        font-size: 2rem;
-    }
-
-    h2 , .h2
-    {
-        font-size: 1.75rem;
-    }
-
-    h3 , .h3
-    {
-        font-size: 1.5rem;
-    }
-
-    h4 , .h4
-    {
-        font-size: 1.12rem;
-    }
+    font-size: 1.3rem;
 }
 
 section
 {
+    padding: 3rem 0;
     margin-top: 3rem;
-    padding: 2.5rem 0;
     background: white;
     margin-bottom: 3rem;
     border-top: .35rem dashed #ddd;
@@ -94,24 +61,17 @@ section
 section:last-child
 {
     margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.short-width
+{
+    width: 42%;
 }
 
 @media( max-width: 990px )
 {
-    section
-    {
-        padding: 2.25rem 1rem;
-    }
-}
-
-.half-width
-{
-    width: 50%;
-}
-
-@media( max-width: 990px )
-{
-    .half-width
+    .short-width
     {
         width: inherit;
     }
@@ -125,7 +85,7 @@ img
 
 a
 {
-    color: #77f;
+    color: #8e97c9;
 }
 
 nav a
@@ -150,7 +110,7 @@ p
 
 .logo
 {
-    max-width: 3.25rem;
+    max-width: 2.75rem;
 }
 
 .center

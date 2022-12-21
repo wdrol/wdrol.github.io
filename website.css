@@ -14,7 +14,7 @@ main , header
 {
     padding: 3rem;
     margin: 0 auto;
-    max-width: 1020px;
+    max-width: 990px;
 }
 
 header
@@ -29,25 +29,10 @@ h1 , h2 , h3 , h4 , .h1 , .h2 , .h3 , .h4
     font-weight: 300;
 }
 
-h1 , .h1
-{
-    font-size: 2rem;
-}
-
-h2 , .h2
-{
-    font-size: 1.7rem;
-}
-
-h3 , .h3
-{
-    font-size: 1.5rem;
-}
-
-h4 , .h4
-{
-    font-size: 1.3rem;
-}
+h1 , .h1 { font-size: 2.0rem; }
+h2 , .h2 { font-size: 1.7rem; }
+h3 , .h3 { font-size: 1.5rem; }
+h4 , .h4 { font-size: 1.3rem; }
 
 section
 {
@@ -62,19 +47,6 @@ section:last-child
 {
     margin-bottom: 0;
     padding-bottom: 0;
-}
-
-.short-width
-{
-    width: 42%;
-}
-
-@media( max-width: 990px )
-{
-    .short-width
-    {
-        width: inherit;
-    }
 }
 
 img
@@ -108,6 +80,19 @@ p
     margin-bottom: 2rem;
 }
 
+.short-width
+{
+    width: 44%;
+}
+
+@media( max-width: 820px )
+{
+    .short-width
+    {
+        width: inherit;
+    }
+}
+
 .logo
 {
     max-width: 2.75rem;
@@ -137,16 +122,13 @@ p
 
 .work-sample img
 {
-    border-radius: .3rem;
-    border: 1px solid #ddd;
+    border-radius: .35rem;
+    border: 1px solid #ccc;
 }
 
-.work-sample .caption
+.no-border
 {
-    color: #555;
-    display: block;
-    margin-top: .5rem;
-    text-align: center;
+    border: none !important;
 }
 
 footer

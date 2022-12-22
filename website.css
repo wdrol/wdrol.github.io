@@ -3,10 +3,12 @@ body
 {
     margin: 0;
     color: black;
+    display: grid;
     font-size: 18px;
     font-weight: 400;
     line-height: 2rem;
     background: white;
+    grid-template-columns: auto 0;
     font-family: Raleway, sans-serif;
 }
 
@@ -97,6 +99,29 @@ nav a , a.logo-link , footer a
 p
 {
     margin-bottom: 2rem;
+}
+
+.top
+{
+    width: 45px;
+    height: 45px;
+    bottom: 43px;
+    place-self: end;
+    position: sticky;
+    margin-right: 15px;
+    border-radius: 10px;
+    background: #ff8b24;
+    margin-top: calc( 100vh + 200px );
+}
+
+.top:before
+{
+    inset: 30%;
+    content: "";
+    position: absolute;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: translateY( 20% ) rotate( -45deg );
 }
 
 .short-width-44 { width: 44%; }

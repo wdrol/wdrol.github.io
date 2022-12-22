@@ -148,7 +148,7 @@ p
 
 .work-sample
 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 3rem;
 }
 
@@ -170,9 +170,9 @@ p
 
 footer
 {
-    padding: 2.5rem 2rem 2rem 2rem;
     background: #ddd;
     text-align: center;
+    padding: 2.5rem 2rem 2rem 2rem;
 }
 
 footer a

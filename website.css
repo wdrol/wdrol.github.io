@@ -27,10 +27,9 @@ main , header
 
 header
 {
+    display: flex;
     padding-top: 2rem;
     padding-bottom: 0;
-
-    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -71,8 +70,8 @@ section:last-child
 
 img
 {
-    width: 100%;
     height: auto;
+    max-width: 100%;
 }
 
 a
@@ -124,6 +123,7 @@ p
 
 .work-sample
 {
+    text-align: center;
     margin-bottom: 3rem;
 }
 
@@ -145,8 +145,7 @@ p
 
 footer
 {
-    padding: 4rem;
-    margin-top: 2rem;
+    padding: 2rem;
     background: #ddd;
     text-align: center;
 }

@@ -108,10 +108,12 @@ p
     bottom: 43px;
     place-self: end;
     position: sticky;
-    margin-right: 15px;
+    margin-right: 22px;
     background: #ff8b24;
     border-radius: .28rem;
     margin-top: calc( 100vh + 200px );
+    -webkit-box-shadow: 1px 1px 4px 0 rgba( 0 , 0 , 0 , .4 );
+            box-shadow: 1px 1px 4px 0 rgba( 0 , 0 , 0 , .4 );
 }
 
 .top:before

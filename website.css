@@ -217,12 +217,15 @@ p
 .work-sample img
 {
     border-radius: .28rem;
-    border: 1px solid #ccc;
+
+    -webkit-box-shadow: 2px 2px 6px 0 rgba( 0 , 0 , 0 , .2 );
+            box-shadow: 2px 2px 6px 0 rgba( 0 , 0 , 0 , .2 );
 }
 
-.no-border
+.no-shadow
 {
-    border: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
 }
 
 footer

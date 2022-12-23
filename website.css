@@ -101,6 +101,7 @@ p
     margin-bottom: 2rem;
 }
 
+/* Solid version of top button (no fading in/out).
 .top
 {
     width: 45px;
@@ -125,6 +126,51 @@ p
     border-right: 5px solid #fff;
     transform: translateY( 20% ) rotate( -45deg );
 }
+*/
+
+
+/* Start fading version of top button ( https://www.freecodecamp.org/news/css-only-back-to-top-button ). */
+.top
+{
+    width: 45px;
+    height: 45px;
+    bottom: 43px;
+    position: sticky;
+    margin-right: 10px; 
+    background: #ff8b24;
+    border-radius: .28rem;
+
+    -webkit-box-shadow: 1px 1px 4px 0 rgba( 0 , 0 , 0 , .4 );
+            box-shadow: 1px 1px 4px 0 rgba( 0 , 0 , 0 , .4 );
+}
+
+.top:before
+{
+    inset: 30%;
+    content: "";
+    position: absolute;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: translateY( 20% ) rotate( -45deg );
+}
+
+.top-wrapper
+{
+    --fade:   120px;
+    --offset: 100px;
+
+    width: 58px;
+    display: flex;
+    justify-self: end;
+    margin-right: 14px;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    -webkit-mask: linear-gradient( #0000 calc( 100vh + var( --offset ) ) , #000 calc( 100vh + var( --offset ) + var( --fade ) ) );
+            mask: linear-gradient( #0000 calc( 100vh + var( --offset ) ) , #000 calc( 100vh + var( --offset ) + var( --fade ) ) );
+}
+/* End fading version of top button ( https://www.freecodecamp.org/news/css-only-back-to-top-button ). */
+
 
 .short-width-44 { width: 44%; }
 .short-width-70 { width: 70%; }

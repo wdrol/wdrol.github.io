@@ -47,6 +47,11 @@ header
 
 @media( max-width: 640px )
 {
+    main
+    {
+        padding-bottom: 1.5rem;
+    }
+
     header
     {
         flex-direction: column;
@@ -93,6 +98,14 @@ a
 nav a
 {
     margin-left: 1rem;
+}
+
+@media( max-width: 640px )
+{
+    nav a:first-child
+    {
+        margin-left: 0;
+    }
 }
 
 a.logo-link
@@ -143,7 +156,7 @@ p
 {
     width: 45px;
     height: 45px;
-    bottom: 43px;
+    bottom: 44px;
     position: sticky;
     margin-right: 10px; 
     background: #ff8b24;
@@ -207,6 +220,22 @@ p
 {
     text-align: left;
     margin-bottom: 3rem;
+}
+
+@media( max-width: 860px )
+{
+    .work-sample
+    {
+        margin-bottom: 2rem;
+    }
+}
+
+@media( max-width: 640px )
+{
+    .work-sample
+    {
+        margin-bottom: 1rem;
+    }
 }
 
 .work-sample:last-child

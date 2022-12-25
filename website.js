@@ -12,7 +12,7 @@ function initWorkSamples()
             }
         })
 
-    } , { threshold :  0.3 /* when 30 percent of entry is visible */ } )
+    } , { threshold :  0.3 /* When 30 percent of item is visible. */ } )
 
     document.querySelectorAll( '.work-sample' ).forEach( sample => intersection.observe( sample ) )
 }

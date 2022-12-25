@@ -223,8 +223,16 @@ p
 
 .work-sample
 {
+    opacity: 0;
     text-align: left;
     margin-bottom: 3rem;
+    will-change: opacity;
+    transition: opacity .9s;
+}
+
+.work-sample.show
+{
+    opacity: 1;
 }
 
 @media( max-width: 860px )

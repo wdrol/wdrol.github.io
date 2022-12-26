@@ -19,6 +19,15 @@ body
     background: white;
     grid-template-columns: auto 0;
     font-family: Raleway, sans-serif;
+
+    will-change: color , background;
+    transition: color 1s , background 1s;
+}
+
+body.dark-mode
+{
+    color: #eee;
+    background: #222;
 }
 
 @media( max-width: 640px )
@@ -78,9 +87,13 @@ section
 {
     padding: 3rem 0;
     margin-top: 3rem;
-    background: white;
     margin-bottom: 3rem;
     border-top: .35rem dashed #ddd;
+}
+
+body.dark-mode section
+{
+    border-color: #555;
 }
 
 section:last-child
@@ -98,6 +111,11 @@ img
 a
 {
     color: #3165bc;
+}
+
+body.dark-mode a
+{
+    color: #81a5bc;
 }
 
 nav a
@@ -118,9 +136,14 @@ a.logo-link
     text-decoration: none;
 }
 
-nav a , a.logo-link , footer a
+nav a , a.logo-link
 {
     color: black;
+}
+
+body.dark-mode nav a , body.dark-mode a.logo-link
+{
+    color: #eee;
 }
 
 p
@@ -128,35 +151,6 @@ p
     margin-bottom: 2rem;
 }
 
-/* Solid version of top button (no fading in/out).
-.top
-{
-    width: 45px;
-    height: 45px;
-    bottom: 43px;
-    place-self: end;
-    position: sticky;
-    margin-right: 22px;
-    background: #ff8b24;
-    border-radius: .28rem;
-    margin-top: calc( 100vh + 200px );
-    -webkit-box-shadow: 1px 1px 4px 0 rgba( 0 , 0 , 0 , .4 );
-            box-shadow: 1px 1px 4px 0 rgba( 0 , 0 , 0 , .4 );
-}
-
-.top:before
-{
-    inset: 30%;
-    content: "";
-    position: absolute;
-    border-top: 5px solid #fff;
-    border-right: 5px solid #fff;
-    transform: translateY( 20% ) rotate( -45deg );
-}
-*/
-
-
-/* Start fading version of top button ( https://www.freecodecamp.org/news/css-only-back-to-top-button ). */
 .top
 {
     width: 45px;
@@ -196,8 +190,6 @@ p
     -webkit-mask: linear-gradient( #0000 calc( 100vh + var( --offset ) ) , #000 calc( 100vh + var( --offset ) + var( --fade ) ) );
             mask: linear-gradient( #0000 calc( 100vh + var( --offset ) ) , #000 calc( 100vh + var( --offset ) + var( --fade ) ) );
 }
-/* End fading version of top button ( https://www.freecodecamp.org/news/css-only-back-to-top-button ). */
-
 
 .short-width-44 { width: 44%; }
 .short-width-70 { width: 70%; }
@@ -215,6 +207,12 @@ p
 {
     max-width: 2.75rem;
 }
+
+.logo-lite { display: inline; }
+.logo-dark { display: none;   }
+
+body.dark-mode .logo-lite { display: none;   }
+body.dark-mode .logo-dark { display: inline; }
 
 .center
 {
@@ -262,6 +260,11 @@ p
     border: 1px solid #d6d6d6;
 }
 
+body.dark-mode .work-sample img
+{
+    border: none;
+}
+
 .no-border
 {
     border: none !important;
@@ -272,6 +275,11 @@ footer
     background: #ddd;
     text-align: center;
     padding: 2.5rem 2rem 2rem 2rem;
+}
+
+body.dark-mode footer
+{
+    background: #888;
 }
 
 footer a

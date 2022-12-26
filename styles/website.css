@@ -194,15 +194,15 @@ p
 
 .top-wrapper
 {
-    --fade:   300px;
-    --offset: 200px;
-
     width: 58px;
     display: flex;
     justify-self: end;
     margin-right: 14px;
     align-items: flex-end;
     justify-content: flex-end;
+    
+    --fade:   300px;
+    --offset: 200px;
 
     -webkit-mask: linear-gradient( #0000 calc( 100vh + var( --offset ) ) , #000 calc( 100vh + var( --offset ) + var( --fade ) ) );
             mask: linear-gradient( #0000 calc( 100vh + var( --offset ) ) , #000 calc( 100vh + var( --offset ) + var( --fade ) ) );

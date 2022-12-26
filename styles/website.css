@@ -1,5 +1,5 @@
 
-/* Smooth scrolling if no preference (for back to top button). */
+/* Smooth scrolling if no preference (for top button). */
 @media screen and ( prefers-reduced-motion: no-preference )
 {
     html
@@ -11,31 +11,48 @@
 body
 {
     margin: 0;
-    color: black;
     display: grid;
-    font-size: 18px;
+    color: #1a1a1a;
     font-weight: 400;
     line-height: 2rem;
     background: white;
     grid-template-columns: auto 0;
-    font-family: Raleway, sans-serif;
-
     will-change: color, background;
-    transition: color 1s , background 1s;
-}
-
-@media( max-width: 640px )
-{
-    body
-    {
-        font-size: 17px;
-    }
+    font-family: Raleway, sans-serif;
+    transition: color 750ms , background 750ms;
 }
 
 .dark body
 {
     color: white;
-    background: black;
+    background: #1a1a1a;
+}
+
+.toggle-dark
+{
+    top: 1px;
+    z-index: 100;
+    font-size: .85rem;
+    margin-left: 2rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.toggle-dark:after
+{
+    top: 3px;
+    left: -14px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #bbb;
+    border-radius: 100%;
+}
+
+.dark .toggle-dark:after
+{
+    background: #0b0;
 }
 
 main , header
@@ -219,7 +236,7 @@ p
     text-align: left;
     margin-bottom: 3rem;
     will-change: opacity;
-    transition: opacity .9s;
+    transition: opacity 750ms;
 }
 
 .work-sample.show
@@ -256,7 +273,7 @@ p
 
 .dark .work-sample img
 {
-    border-color: black;
+    border-color: #1a1a1a;
 }
 
 .no-border

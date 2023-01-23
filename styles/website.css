@@ -138,23 +138,6 @@ a
 nav a
 {
     margin-left: 1rem;
-    will-change: color;
-    transition: color 500ms;
-}
-
-nav a:not(.toggle-dark):hover
-{
-    color: #3165bc;
-}
-
-.dark nav a:not(.toggle-dark)
-{
-    color: #ccc;
-}
-
-.dark nav a:not(.toggle-dark):hover
-{
-    color: white;
 }
 
 @media( max-width: 640px )

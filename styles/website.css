@@ -17,7 +17,7 @@ body
     line-height: 2rem;
     background: white;
     grid-template-columns: auto 0;
-    will-change: color, background;
+    will-change: color , background;
     font-family: Raleway, sans-serif;
     transition: color 750ms , background 750ms;
 }
@@ -245,14 +245,17 @@ p
 .work-sample
 {
     opacity: 0;
+    left: -24px;
     text-align: left;
+    position: relative;
     margin-bottom: 3rem;
-    will-change: opacity;
-    transition: opacity 750ms;
+    will-change: left , opacity;
+    transition: left 750ms , opacity 800ms;
 }
 
 .work-sample.show
 {
+    left: 0;
     opacity: 1;
 }
 

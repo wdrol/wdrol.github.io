@@ -138,6 +138,23 @@ a
 nav a
 {
     margin-left: 1rem;
+    will-change: color;
+    transition: color 500ms;
+}
+
+nav a:not(.toggle-dark):hover
+{
+    color: #3165bc;
+}
+
+.dark nav a:not(.toggle-dark)
+{
+    color: #ccc;
+}
+
+.dark nav a:not(.toggle-dark):hover
+{
+    color: white;
 }
 
 @media( max-width: 640px )
@@ -150,6 +167,9 @@ nav a
 
 a.logo-link
 {
+    top: -4px;
+    position: relative;
+    display: inline-block;
     text-decoration: none;
 }
 
@@ -161,6 +181,20 @@ nav a , a.logo-link
 .dark nav a , .dark a.logo-link
 {
     color: white;
+}
+
+.logo
+{
+    top: 6px;
+    position: relative;
+    max-width: 2.75rem;
+    will-change: transform;
+    transition: transform 500ms;
+}
+
+a.logo-link:hover .logo
+{
+    transform: scale( 1.2 , 1.2 );
 }
 
 p
@@ -218,11 +252,6 @@ p
     {
         width: inherit;
     }
-}
-
-.logo
-{
-    max-width: 2.75rem;
 }
 
 .center

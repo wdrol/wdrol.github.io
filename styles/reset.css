@@ -1,0 +1,46 @@
+
+/* Smooth scrolling if no preference */
+@media screen and ( prefers-reduced-motion: no-preference )
+{
+    html
+    {
+        scroll-behavior: smooth;
+    }
+}
+
+html , body
+{
+    isolation: isolate;
+}
+
+*
+{
+    margin: 0;
+}
+
+* , *:before , *:after
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+picture , video , canvas , svg
+{
+    display: block;
+    max-width: 100%;
+}
+
+input , button , textarea , select
+{
+    font: inherit; /* remove built-in form typography styles */
+}
+
+p , h1 , h2 , h3 , h4 , h5 , h6
+{
+    overflow-wrap: break-word;
+}

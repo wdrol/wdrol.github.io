@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Test 2 | William Drol</title>
+
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <link href="./styles/reset.css?ver=1" rel="stylesheet">
+
+    <style>
+        html, body
+        {
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+    <iframe id="iframe1" src="https://iframe.socialclimb.com/iframe/7c130289-29c3-49ed-aeda-1b8f57b2df57/reviews?doc=145403" width="1060" height="400"></iframe>
+
+    <iframe id="iframe2" src="https://iframe.socialclimb.com/iframe/7c130289-29c3-49ed-aeda-1b8f57b2df57/reviews?doc=144723" width="1060" height="400"></iframe>
+
+    <iframe id="iframe3" src="https://wdrol.github.io/test3.html" width="1060" height="400"></iframe>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <script>
+        jQuery( document ).ready( function()
+        {
+            function getReviewCount( id )
+            {
+                var count = jQuery( id ).contents().find( 'body .review' ).length
+
+                return count
+            }
+
+            setTimeout( function()
+            {
+                console.log( 'review count 1 = ' , getReviewCount( '#iframe1' ) )
+                console.log( 'review count 2 = ' , getReviewCount( '#iframe2' ) )
+                console.log( 'review count 3 = ' , getReviewCount( '#iframe3' ) )
+
+            } , 2000 )
+        })
+    </script>
+
+</body>
+</html>

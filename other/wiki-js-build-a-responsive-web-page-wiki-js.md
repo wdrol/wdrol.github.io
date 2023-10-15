@@ -435,7 +435,7 @@ For the fourth change, we need to add some `width` cheats to our existing header
 
 <br>
 
-> In finished code, we would never use inline styles like the header example above (we'll remove them later during the detail pass). If you enjoy reading heated opinions, google why inline styles are bad.
+> In production level code, we would not use inline styles like the header example above (we'll remove them later during the detail pass). If you enjoy reading heated opinions, google why inline styles are bad.
 {.is-info}
 
 <br>

@@ -367,7 +367,7 @@ And like this on large desktop screens.
 
 <br>
 
-We're getting close to a complete desktop wireframe page. We need to do four more things before we can start the mobile wireframes and responsive coding:
+We're getting close to a complete desktop wireframe page. We need to do four more things before we can begin the mobile wireframes and responsive coding:
 
 1. Change `flex-space-between` to `flex-centered` in the footer.
 1. Change the header text to something more descriptive (we'll see why soon).
@@ -435,12 +435,14 @@ For the fourth change, we need to add some `width` cheats to our existing header
 
 <br>
 
-> In finished code, we would never use inline styles like the header example above (we'll remove them later during the detail pass). If you want to see hot opinions, google why inline styles are bad. Enjoy!
+> In finished code, we would never use inline styles like the header example above (we'll remove them later during the detail pass). If you enjoy reading heated opinions, google why inline styles are bad.
 {.is-info}
 
 <br>
 
-So what is the point of cheating the widths like this? In responsive coding, one of the basic tenets is letting the content drive the code, not the other way around. If you have a look at the two screens below, notice the amount of horizontal white space between the Primary Menu Links and the CTA Button. In the large desktop screen there is plenty of available space, but the in the average laptop screen we've run out of room. We wouldn't have been able to notice this without the `width` cheats.
+So what is the point of cheating the widths like this? One of the basic tenets in responsive coding is letting the content drive the code, not the other way around. If you have a look at the two screens below, notice the amount of horizontal white space between the Primary Menu Links and the CTA Button. There is plenty of available space at the large desktop size, but we've run out of room at the laptop size and smaller. We wouldn't have noticed this without the `width` cheats, unless we had entered the real content and styles, which defeats the purpose of a fast wireframe pass.
+
+Now that we can see in the browser where we run out of space in the header, we can adapt and switch over to the mobile wireframes (which we haven't coded yet, that section is next). The important part is that we're not inventing the switch over point first and hoping the content will fit, we're letting the content dictate when we switch to mobile.
 
 Large Desktop Screen
 

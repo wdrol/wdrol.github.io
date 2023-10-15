@@ -159,7 +159,7 @@ Out-of-the-box, the `h1` text seems quite large, so we can adjust that with an `
 
 <br>
 
-After those updates, our page should look similar to this.
+The page should now look like this.
 
 ![wire-01.png](/solutions/development/build-a-responsive-web-page/wire-01.png =900x)
 <br>
@@ -355,13 +355,13 @@ Let's also add some footer blocks to get closer to the design.
 </footer>
 ```
 
-At this point, our page should look similar to this on laptop screens or small desktops.
+The page should now look like this on laptop screens or small desktops.
 
 ![wire-03.png](/solutions/development/build-a-responsive-web-page/wire-03.png =900x)
 
 <br>
 
-And something like this on large desktop screens.
+And like this on large desktop screens.
 
 ![wire-04.png](/solutions/development/build-a-responsive-web-page/wire-04.png)
 

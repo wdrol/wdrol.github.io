@@ -435,20 +435,20 @@ For the fourth change, we need to add some `width` cheats to our existing header
 
 <br>
 
-> In finished code, we would never use inline styles like the header example above (we'll remove them later during the detail pass). If you want to see opinions explode, google why inline styles are bad. Enjoy!
-{.is-warning}
+> In finished code, we would never use inline styles like the header example above (we'll remove them later during the detail pass). If you want to see hot opinions, google why inline styles are bad. Enjoy!
+{.is-info}
 
 <br>
 
-So what is the point of cheating the widths like this?
+So what is the point of cheating the widths like this? In responsive coding, one of the basic tenets is letting the content drive the code, not the other way around. If you have a look at the two screens below, notice the amount of horizontal white space between the Primary Menu Links and the CTA Button. In the large desktop screen there is plenty of available space, but the in the average laptop screen we've run out of room. We wouldn't have been able to notice this without the `width` cheats.
 
-Large Desktop Screenshot
+Large Desktop Screen
 
 ![wire-06.png](/solutions/development/build-a-responsive-web-page/wire-06.png)
 
 <br>
 
-Average Laptop Screenshot
+Average Laptop Screen
 
 ![wire-07.png](/solutions/development/build-a-responsive-web-page/wire-07.png =900x)
 

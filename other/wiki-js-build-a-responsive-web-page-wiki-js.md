@@ -470,7 +470,7 @@ So looking at laptop screen above, it appears that we're running out of horizont
 }
 ```
 
-You can think of line `1` above as an if statement that reads:
+You can think of line `1` above like an if statement that reads:
 
 *if your browswer or device is less than 991 pixels wide, do the following.*
 

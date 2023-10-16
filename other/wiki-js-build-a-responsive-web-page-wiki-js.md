@@ -1,3 +1,5 @@
+> **Prerequisites** basic knowledge of Html and Css, a browser, and simple text editor. There is a small amount of Javascript in this article, but just in one section.
+
 # How to Build a Responsive Web Page
 This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap, Sitecore, SXA, React, and Angular to learn how those technologies impact our implementation.
 

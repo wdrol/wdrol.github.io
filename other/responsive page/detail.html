@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body
+        {
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+
+        .wire
+        {
+            padding: 20px 30px;
+            margin-bottom: 20px; 
+            border: 2px dashed #ccc;
+        }
+
+        h1
+        {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .flex-space-between
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-centered
+        {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media( max-width: 768px )
+        {
+            .footer-links
+            {
+                flex-direction: column;
+            }
+        }
+
+        .max-content-width
+        {
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .center { text-align: center; }
+
+        header .mobile  { display: none;  }
+        header .desktop { display: block; }
+
+        @media( max-width: 991px )
+        {
+            header .mobile  { display: block; }
+            header .desktop { display: none;  }
+        }
+
+        .mobile-menu-content
+        {
+            height: 0;
+            padding: 0;
+            opacity: 0;
+            border: none;
+            overflow: hidden;
+            will-change: all;
+            margin-bottom: 0;
+            transition: all 400ms;
+        }
+
+        .mobile-menu-content.expanded
+        {
+            opacity: 1;
+            height: unset;
+            padding: 20px 30px;
+            margin-bottom: 20px; 
+            border: 2px dashed #ccc;
+        }
+
+        .logo
+        {
+            height: auto;
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="wire">
+        <div class="max-content-width">
+            <div class="desktop">
+                <div class="flex-space-between">
+                    <img class="logo" src="logo.png" alt="logo" />
+                    <div class="wire" style="width: 500px;">Links and Search Here</div>
+                </div>
+                <div class="flex-space-between">
+                    <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
+                    <div class="wire" style="width: 120px;">CTA Button</div>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="flex-space-between">
+                    <div class="wire">Logo Here</div>
+                    <div class="wire mobile-menu-button">Menu</div>
+                </div>
+                <div class="wire mobile-menu-content">
+                    <div class="flex-centered">
+                        <div class="wire">CTA Button</div>
+                        <div class="wire">Links and Search Here</div>
+                    </div>
+                    <div class="wire center">Primary Menu Links Here</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="wire">
+        <div class="max-content-width">
+            <h1>Wireframe</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et doa aliqua.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                Excepteur sint occaecat cupidatat non proident, ub officia deserunt mollid est laborum.
+            </p>
+        </div>
+    </main>
+
+    <footer class="wire">
+        <div class="max-content-width">
+            <div class="footer-links flex-centered">
+                <div class="wire">
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                </div>
+                <div class="wire">
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                </div>
+            </div>
+            <div class="wire center">Social Media Icons Here</div>
+            <div class="wire center">&copy;2023 Copyright Line Information</div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded' , function()
+        {
+            const button  = document.getElementsByClassName( 'mobile-menu-button'  )
+            const content = document.getElementsByClassName( 'mobile-menu-content' )
+
+            //----- Handle mobile menu button clicks.
+            if ( button.length > 0 && content.length > 0 )
+            {
+                button[0].addEventListener( 'click' , function()
+                {
+                    //----- Toggle mobile menu content.
+                    content[0].classList.toggle( 'expanded' )
+                })
+            }
+        })
+    </script>
+</body>
+</html>

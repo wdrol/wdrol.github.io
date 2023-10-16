@@ -740,10 +740,10 @@ There's one last thing we need to finish the wireframe pass. In the footer, ther
 ```html
 @media( max-width: 768px )
 {
-		.footer-links
-		{
-				flex-direction: column;
-		}
+    .footer-links
+    {
+        flex-direction: column;
+    }
 }
 ```
 
@@ -941,13 +941,13 @@ Here is the finished wireframe page at large desktop size.
 
 <br>
 
-Here is the finished wireframe page at laptop or tablet size.
+Wireframe page at laptop or tablet size.
 
 ![wire-10.png](/solutions/development/build-a-responsive-web-page/wire-10.png =600x)
 
 <br>
 
-Here is the finished wireframe page at mobile size.
+Wireframe page at mobile size.
 
 ![wire-11.png](/solutions/development/build-a-responsive-web-page/wire-11.png =400x)
 

@@ -504,7 +504,7 @@ Lines `1` and `2` above set the default state (desktop visible), while lines `6`
 
 <br>
 
-If we add the mobile content for line 7 above, the header would now look like this. These are classes that we used before, with the exception of `mobile-menu-button` and `mobile-menu-content`, which we'll need in a little bit:
+If we insert the mobile content for line 7 above, the header would look like the following. This code is similar to everything we've seen so far. The `mobile-menu-button` and `mobile-menu-content` classes are new, however, and we'll need them in just a little bit:
 
 ```html
 <header class="wire">

@@ -502,8 +502,6 @@ Lines `1` and `2` above set the default state (desktop visible), while lines `6`
 </header>
 ```
 
-<br>
-
 If we insert the mobile content for line 7 above, the header would look like the following. This code is similar to everything we've seen so far. The `mobile-menu-button` and `mobile-menu-content` classes are new, however, and we'll need them in just a little bit:
 
 ```html
@@ -668,159 +666,46 @@ Ok, that's a lot of changes. Here is the full code listing so far:
 
 <br>
 
-So this is what the page looks like when the browser width drops below 991 pixels. If you made it this far, congratulations, this is your first bit of responsive coding success!
+So this is what the page looks like when the browser width drops below 991 pixels. Give it a try to see how it changes as you increase and decrease the width of your browser. If you made it this far and haven't built responsive web pages before, congratulations!
 
 ![wire-08.png](/solutions/development/build-a-responsive-web-page/wire-08.png =900x)
 
 <br>
 
-Add javascript to toggle mobile menu content
+Now let's have a closer look at the mobile content. The design requires an expandable mobile content section, so initially, it needs to be hidden. When we click the mobile menu button, it should reveal the content. If we click it again, it should hide the content. To do this, we'll need some Javascript and a little more CSS. For the Javascript, we need to add a `<script>...</script>` block near the end of the document, just before the closing `</body>` tag, as shown below.
+
+Lines `4` to `14` define the initial, hidden state of the mobile content. We're using a transition of 400ms (milliseconds) at line `13` to ensure a smooth reveal when the button is clicked. Lines `16` to `23` define the visible state of the content.
+
+For the Javascript, line `30` ensures we do not run the code until the DOM is ready. Line `38` is the button click handler. When we click the button, what really happens is that line `41` dynamically adds and removes a class named `expand` to the `mobile-menu-content` div in the DOM. If you inspect the page, you can actually see the `expand` class appear and disappear on that line of HTML. Because the CSS already has a definition for the expanded state at line `16`, it all seems to work like magic. Give it a try.
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Wireframe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body
-        {
-            font-size: 18px;
-            font-family: sans-serif;
-        }
+<style>
+    ...
 
-        .wire
-        {
-            padding: 20px 30px;
-            margin-bottom: 20px; 
-            border: 2px dashed #ccc;
-        }
+    .mobile-menu-content
+    {
+        height: 0;
+        padding: 0;
+        opacity: 0;
+        border: none;
+        overflow: hidden;
+        will-change: all;
+        margin-bottom: 0;
+        transition: all 400ms;
+    }
 
-        h1
-        {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .flex-space-between
-        {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .flex-centered
-        {
-            gap: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .max-content-width
-        {
-            margin: 0 auto;
-            max-width: 1400px;
-        }
-
-        .center { text-align: center; }
-
-        header .mobile  { display: none;  }
-        header .desktop { display: block; }
-
-        @ media( max-width: 991px )
-        {
-            header .mobile  { display: block; }
-            header .desktop { display: none;  }
-        }
-
-        .mobile-menu-content
-        {
-            height: 0;
-            padding: 0;
-            border: none;
-            opacity: .25;
-            overflow: hidden;
-            will-change: all;
-            margin-bottom: 0;
-            transition: all 400ms;
-        }
-
-        .mobile-menu-content.expanded
-        {
-            opacity: 1;
-            height: unset;
-            padding: 20px 30px;
-            margin-bottom: 20px; 
-            border: 2px dashed #ccc;
-        }
-    </style>
-</head>
+    .mobile-menu-content.expanded
+    {
+        opacity: 1;
+        height: unset;
+        padding: 20px 30px;
+        margin-bottom: 20px; 
+        border: 2px dashed #ccc;
+    }
+</style>
 
 <body>
-    <header class="wire">
-        <div class="max-content-width">
-            <div class="desktop">
-                <div class="flex-space-between">
-                    <div class="wire" style="width: 200px;">Logo Here</div>
-                    <div class="wire" style="width: 500px;">Links and Search Here</div>
-                </div>
-                <div class="flex-space-between">
-                    <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
-                    <div class="wire" style="width: 120px;">CTA Button</div>
-                </div>
-            </div>
-            <div class="mobile">
-                <div class="flex-space-between">
-                    <div class="wire">Logo Here</div>
-                    <div class="wire mobile-menu-button">Menu</div>
-                </div>
-                <div class="wire mobile-menu-content">
-                    <div class="flex-centered">
-                        <div class="wire">CTA Button</div>
-                        <div class="wire">Links and Search Here</div>
-                    </div>
-                    <div class="wire center">Primary Menu Links Here</div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="wire">
-        <div class="max-content-width">
-            <h1>Wireframe</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et doa aliqua.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                Excepteur sint occaecat cupidatat non proident, ub officia deserunt mollid est laborum.
-            </p>
-        </div>
-    </main>
-
-    <footer class="wire">
-        <div class="max-content-width">
-            <div class="flex-centered">
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                </div>
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                </div>
-            </div>
-            <div class="wire center">Social Media Icons Here</div>
-            <div class="wire center">&copy;2023 Copyright Line Information</div>
-        </div>
-    </footer>
+    ...
 
     <script>
         document.addEventListener( 'DOMContentLoaded' , function()
@@ -845,7 +730,28 @@ Add javascript to toggle mobile menu content
 
 <br>
 
-Add responsive code to footer
+> Btw, React and Angular excel at interactive behaviors. Without them, we have to write the code manually to handle interactions like above. We'll take a look at Angular and React in Part Three.
+{.is-info}
+
+<br>
+
+There's one last thing we need to finish the wireframe pass. In the footer, there are two large blocks of links next to each other horizontally. One smaller mobile devices, the design calls for these blocks to be stacked vertically. Here's the CSS to handle that.
+
+```html
+@media( max-width: 768px )
+{
+		.footer-links
+		{
+				flex-direction: column;
+		}
+}
+```
+
+Line 5 above sets the flex-direction to column (the default value is row) which causes the two blocks to stack vertically.
+
+The `768px` on line `1` above is a guess and may need to be adjusted later. We could have put in width cheats just like we did with the header, but we won't pursue that here and now. Feel free to try that on your own as an exercise. In the next section, the detail pass, there will be plenty of opportunities to adjust the `768px` if needed.
+
+Here is the final code listing for the wireframe pass. Congratulations! You should now have a fully functional responsive page. In the next section, the detail pass, we'll update each of the wire blocks to make the page match the design.
 
 ```html
 <!DOCTYPE html>
@@ -917,8 +823,8 @@ Add responsive code to footer
         {
             height: 0;
             padding: 0;
+            opacity: 0;
             border: none;
-            opacity: .25;
             overflow: hidden;
             will-change: all;
             margin-bottom: 0;
@@ -1024,9 +930,26 @@ Add responsive code to footer
 
 <br>
 
-Screenshot
+> Like earlier in this section, I had to put a space between the `@` character and `media` to avoid an unfortunate Wiki display issue (see line 60 above). This is a syntax error in CSS. If you're copy/pasting the code from this Wiki, you'll need to remove the space so it reads `@media`.
+{.is-warning}
 
-![wire-09.png](/solutions/development/build-a-responsive-web-page/wire-09.png =700x)
+<br>
+
+Here is the finished wireframe page at large desktop size.
+
+![wire-12.png](/solutions/development/build-a-responsive-web-page/wire-12.png =800x)
+
+<br>
+
+Here is the finished wireframe page at laptop or tablet size.
+
+![wire-10.png](/solutions/development/build-a-responsive-web-page/wire-10.png =600x)
+
+<br>
+
+Here is the finished wireframe page at mobile size.
+
+![wire-11.png](/solutions/development/build-a-responsive-web-page/wire-11.png =400x)
 
 <br>
 

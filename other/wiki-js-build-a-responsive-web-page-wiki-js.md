@@ -10,6 +10,8 @@ This is a deep-dive on how to build a responsive web page from scratch. In Parts
 ## Part One - Design
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
+**Explain desktop-first vs. mobile-first design strategies.**
+
 <br>
 
 ## Part Two - Implementation
@@ -442,7 +444,7 @@ For the fourth change, we need to add some `width` cheats to our existing header
 
 So what is the point of cheating the widths like this? One of the basic tenets in responsive coding is letting the content drive the code, not the other way around. If you have a look at the two screens below, notice the amount of horizontal white space between the Primary Menu Links and the CTA Button. There is plenty of available space at the large desktop size, but we've run out of room at the laptop size and smaller. We wouldn't have noticed this without the width cheats, unless we had entered the real content and styles, which defeats the purpose of a fast wireframe pass.
 
-Now that we can see in the browser where we run out of space in the header, we can adapt and switch over to the mobile wireframes (which we haven't coded yet, that section is next). The important part is that we're not inventing the switch over point first and hoping the content will fit, we're letting the content dictate when we switch to mobile.
+Now that we can see in the browser where we run out of space in the header, we can adapt and switch over to the mobile wireframes (which we haven't coded yet). The important part is that we're not inventing the switch over point first and hoping the content will fit, we're letting the content dictate when we switch to mobile.
 
 Large Desktop Screen
 
@@ -456,118 +458,80 @@ Average Laptop Screen
 
 <br>
 
-Here is the full code listing so far.
+So looking at laptop screen above, it appears that we're running out of horizontal space in the header somewhere close to 1000 pixels wide and smaller. The precise number isn't hugely important, we're not locked down once we choose a number. Because I've worked with Bootstrap, I know one of its built-in breakpoints is 991 pixels, so let's start with that and see how close we get. Since our design stategy is desktop-first, we can add the following CSS media query to respond conditionally like this:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Wireframe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body
-        {
-            font-size: 18px;
-            font-family: sans-serif;
-        }
+@media( max-width: 991px )
+{
+    your css selector here
+    {
+        your css rules here
+    }
+}
+```
 
-        .wire
-        {
-            padding: 20px 30px;
-            margin-bottom: 20px; 
-            border: 2px dashed #ccc;
-        }
+You can think of line `1` above as an if statement that reads:
 
-        h1
-        {
-            margin: 0;
-            font-size: 24px;
-        }
+*if your browswer or device is less than 991 pixels wide, do the following.*
 
-        .flex-space-between
-        {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+For the header, we're only concerned with two things, are we in desktop mode or mobile mode? We can model this in CSS with two new classes and a media query like so:
 
-        .flex-centered
-        {
-            gap: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+```html
+    header .mobile  { display: none;  }
+    header .desktop { display: block; }
 
-        .max-content-width
-        {
-            margin: 0 auto;
-            max-width: 1400px;
-        }
+    @media( max-width: 991px )
+    {
+        header .mobile  { display: block; }
+        header .desktop { display: none;  }
+    }
+```
 
-        .center
-        {
-            text-align: center;
-        }
-    </style>
-</head>
+Lines `1` and `2` above set the default state (desktop visible), while lines `6` and `7` set the responsive state (mobile visible). If we added these classes to the HTML, we'd get something like this:
 
-<body>
-    <header class="wire">
-        <div class="max-content-width">
-            <div class="flex-space-between">
-                <div class="wire" style="width: 200px;">Logo Here</div>
-                <div class="wire" style="width: 500px;">Links and Search Here</div>
-            </div>
-            <div class="flex-space-between">
-                <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
-                <div class="wire" style="width: 120px;">CTA Button</div>
-            </div>
+```html
+<header class="wire">
+    <div class="max-content-width">
+        <div class="desktop">
+            ...
         </div>
-    </header>
-
-    <main class="wire">
-        <div class="max-content-width">
-            <h1>Wireframe</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et doa aliqua.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                Excepteur sint occaecat cupidatat non proident, ub officia deserunt mollid est laborum.
-            </p>
+        <div class="mobile">
+            <strong>Mobile Header Version</strong>
         </div>
-    </main>
-
-    <footer class="wire">
-        <div class="max-content-width">
-            <div class="flex-centered">
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                </div>
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                </div>
-            </div>
-            <div class="wire center">Social Media Icons Here</div>
-            <div class="wire center">&copy;2023 Copyright Line Information</div>
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+</header>
 ```
 
 <br>
 
-Add desktop/mobile media query
+If we add the mobile content for line 7 above, the header would now look like this. These are classes that we used before, with the exception of `mobile-menu-button` and `mobile-menu-content`, which we'll need in a little bit:
+
+```html
+<header class="wire">
+    <div class="max-content-width">
+        <div class="desktop">
+            ...
+        </div>
+        <div class="mobile">
+            <div class="flex-space-between">
+                <div class="wire">Logo Here</div>
+                <div class="wire mobile-menu-button">Menu</div>
+            </div>
+            <div class="wire mobile-menu-content">
+                <div class="flex-centered">
+                    <div class="wire">CTA Button</div>
+                    <div class="wire">Links and Search Here</div>
+                </div>
+                <div class="wire center">Primary Menu Links Here</div>
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+<br>
+
+Ok, that's a lot of changes. Here is the full code listing so far:
 
 ```html
 <!DOCTYPE html>
@@ -618,135 +582,13 @@ Add desktop/mobile media query
 
         .center { text-align: center; }
 
-        .mobile  { display: none;  }
-        .desktop { display: block; }
+        header .mobile  { display: none;  }
+        header .desktop { display: block; }
 
-        @media( max-width: 991px )
+        @ media( max-width: 991px )
         {
-            .mobile  { display: block; }
-            .desktop { display: none;  }
-        }
-    </style>
-</head>
-
-<body>
-    <header class="wire">
-        <div class="max-content-width">
-            <div class="desktop">
-                <div class="flex-space-between">
-                    <div class="wire" style="width: 200px;">Logo Here</div>
-                    <div class="wire" style="width: 500px;">Links and Search Here</div>
-                </div>
-                <div class="flex-space-between">
-                    <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
-                    <div class="wire" style="width: 120px;">CTA Button</div>
-                </div>
-            </div>
-            <div class="mobile">
-                <strong>Mobile Header Version</strong>
-            </div>
-        </div>
-    </header>
-
-    <main class="wire">
-        <div class="max-content-width">
-            <h1>Wireframe</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et doa aliqua.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                Excepteur sint occaecat cupidatat non proident, ub officia deserunt mollid est laborum.
-            </p>
-        </div>
-    </main>
-
-    <footer class="wire">
-        <div class="max-content-width">
-            <div class="flex-centered">
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                </div>
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                </div>
-            </div>
-            <div class="wire center">Social Media Icons Here</div>
-            <div class="wire center">&copy;2023 Copyright Line Information</div>
-        </div>
-    </footer>
-</body>
-</html>
-```
-
-<br>
-
-The mobile version of the header
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Wireframe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body
-        {
-            font-size: 18px;
-            font-family: sans-serif;
-        }
-
-        .wire
-        {
-            padding: 20px 30px;
-            margin-bottom: 20px; 
-            border: 2px dashed #ccc;
-        }
-
-        h1
-        {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .flex-space-between
-        {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .flex-centered
-        {
-            gap: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .max-content-width
-        {
-            margin: 0 auto;
-            max-width: 1400px;
-        }
-
-        .center { text-align: center; }
-
-        .mobile  { display: none;  }
-        .desktop { display: block; }
-
-        @media( max-width: 991px )
-        {
-            .mobile  { display: block; }
-            .desktop { display: none;  }
+            header .mobile  { display: block; }
+            header .desktop { display: none;  }
         }
     </style>
 </head>
@@ -821,7 +663,12 @@ The mobile version of the header
 
 <br>
 
-Screenshot
+> If you're paying close attention, you may have noticed a syntax error in the previous code listing at line `52`. I had to put a space between the `@` character and `media` to avoid an unfortunate Wiki display issue. If you're copy/pasting the code from this Wiki, you'll need to remove the space so it reads `@media`.
+{.is-warning}
+
+<br>
+
+So this is what the page looks like when the browser width drops below 991 pixels. If you made it this far, congratulations, this is your first bit of responsive coding success!
 
 ![wire-08.png](/solutions/development/build-a-responsive-web-page/wire-08.png =900x)
 
@@ -878,13 +725,13 @@ Add javascript to toggle mobile menu content
 
         .center { text-align: center; }
 
-        .mobile  { display: none;  }
-        .desktop { display: block; }
+        header .mobile  { display: none;  }
+        header .desktop { display: block; }
 
-        @media( max-width: 991px )
+        @ media( max-width: 991px )
         {
-            .mobile  { display: block; }
-            .desktop { display: none;  }
+            header .mobile  { display: block; }
+            header .desktop { display: none;  }
         }
 
         .mobile-menu-content
@@ -1041,7 +888,7 @@ Add responsive code to footer
             justify-content: center;
         }
 
-        @media( max-width: 768px )
+        @ media( max-width: 768px )
         {
             .footer-links
             {
@@ -1057,13 +904,13 @@ Add responsive code to footer
 
         .center { text-align: center; }
 
-        .mobile  { display: none;  }
-        .desktop { display: block; }
+        header .mobile  { display: none;  }
+        header .desktop { display: block; }
 
-        @media( max-width: 991px )
+        @ media( max-width: 991px )
         {
-            .mobile  { display: block; }
-            .desktop { display: none;  }
+            header .mobile  { display: block; }
+            header .desktop { display: none;  }
         }
 
         .mobile-menu-content

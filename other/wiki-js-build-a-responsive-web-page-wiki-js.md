@@ -1944,6 +1944,10 @@ Here is the updated header:
 
 <br>
 
+The last step is to remove all remaining `wire` classes, and they're both in the header.
+
+<br>
+
 ## Part Three - Enhancements
 > Work in Progress...
 

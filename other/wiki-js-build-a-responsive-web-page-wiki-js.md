@@ -962,7 +962,7 @@ body
 }
 ```
 
-Then append the following new CSS to the style tag:
+Then append the following new CSS to the `style` tag:
 
 ```html
 <style>
@@ -1330,7 +1330,7 @@ The page now looks like this in desktop.
 
 <br>
 
-We can finish the `footer` with just a few more changes. First, let's change the existing footer links media query to the following to ensure proper alignment and spacing.
+The `footer` needs the least amount of work to finish, so let's tackle that next. Please change the existing footer links media query to the following to ensure proper alignment and spacing.
 
 ```html
 @media( max-width: 768px )
@@ -1348,7 +1348,7 @@ We can finish the `footer` with just a few more changes. First, let's change the
 }
 ```
 
-We'll need a few other footer styles, please append these to the `style` tag.
+We'll need a few other footer styles, let's append these to the `style` tag.
 
 ```html
 <style>
@@ -1386,7 +1386,7 @@ We'll need a few other footer styles, please append these to the `style` tag.
 </style>
 ```
 
-The HTML content in the footer needs some minor updates. Basically, we're removing all of the `wire` classes inside the `footer` tag, and then updating some of the other HTML.
+The content in the footer needs some minor updates. Basically, we're removing all of the `wire` classes inside the `footer` tag, and then updating the links and social media icons.
 
 Here is the footer before:
 
@@ -1740,6 +1740,140 @@ Here is the full code listing so far:
 </body>
 </html>
 ```
+
+<br>
+
+There are three more updates needed to finish the header (desktop and mobile):
+
+1. Add primary links.
+1. Add a new CTA button.
+1. Add links and search box.
+
+<br>
+
+For the primary menu links, please append the following CSS to the `style` tag.
+
+> Lines `4` to `11` below are for needed for edge padding when the browser nears the maximum content width size, which has nothing to do with the primary menu links. I just noticed this issue once the `wire` class was removed, so we might as well handle it now.
+{.is-info}
+
+```html
+<style>
+    ...
+
+    @media( max-width: 1420px )
+    {
+        header , main , footer
+        {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .desktop .primary-menu-links a
+    {
+        margin-right: 30px;
+        display: inline-block;
+    }
+
+    .desktop .primary-menu-links a:last-child
+    {
+        margin-right: 0;
+    }
+
+    .mobile .primary-menu-links a
+    {
+        display: block;
+        margin: 12px 0;
+        margin-right: 0;
+    }
+</style>
+```
+
+<br>
+
+For the content changes, here is the header before:
+
+```html
+<header>
+    <div class="max-content-width">
+        <div class="desktop">
+            <div class="flex-space-between">
+                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                <div class="wire" style="width: 500px;">Links and Search Here</div>
+            </div>
+            <div class="flex-space-between">
+                <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
+                <div class="wire" style="width: 120px;">CTA Button</div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="flex-space-between">
+                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                <div class="wire mobile-menu-button">Menu</div>
+            </div>
+            <div class="wire mobile-menu-content">
+                <div class="flex-centered">
+                    <div class="wire">CTA Button</div>
+                    <div class="wire">Links and Search Here</div>
+                </div>
+                <div class="wire center">Primary Menu Links Here</div>
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+Here is the header after:
+
+```html
+<header>
+    <div class="max-content-width">
+        <div class="desktop">
+            <div class="flex-space-between">
+                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                <div class="wire" style="width: 500px;">Links and Search Here</div>
+            </div>
+            <div class="flex-space-between">
+                <div class="primary-menu-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Our Services</a>
+                    <a href="#">Our Locations</a>
+                    <a href="#">For Contractors</a>
+                </div>
+                <div class="wire" style="width: 120px;">CTA Button</div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="flex-space-between">
+                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                <div class="wire mobile-menu-button">Menu</div>
+            </div>
+            <div class="wire mobile-menu-content">
+                <div class="flex-centered">
+                    <div class="wire">CTA Button</div>
+                    <div class="wire">Links and Search Here</div>
+                </div>
+                <div class="primary-menu-links center">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Our Services</a>
+                    <a href="#">Our Locations</a>
+                    <a href="#">For Contractors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+<br>
+
+Here is the updated header:
+
+![detail-04.png](/solutions/development/build-a-responsive-web-page/detail-04.png =900x)
 
 <br>
 

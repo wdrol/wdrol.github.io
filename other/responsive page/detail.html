@@ -166,6 +166,33 @@
             color: #555;
             font-size: 14px;
         }
+
+        @media( max-width: 1420px )
+        {
+            header , main , footer
+            {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        .desktop .primary-menu-links a
+        {
+            margin-right: 30px;
+            display: inline-block;
+        }
+
+        .desktop .primary-menu-links a:last-child
+        {
+            margin-right: 0;
+        }
+
+        .mobile .primary-menu-links a
+        {
+            display: block;
+            margin: 12px 0;
+            margin-right: 0;
+        }
     </style>
 </head>
 
@@ -178,7 +205,14 @@
                     <div class="wire" style="width: 500px;">Links and Search Here</div>
                 </div>
                 <div class="flex-space-between">
-                    <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
+                    <div class="primary-menu-links">
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Our Services</a>
+                        <a href="#">Our Locations</a>
+                        <a href="#">For Contractors</a>
+                    </div>
                     <div class="wire" style="width: 120px;">CTA Button</div>
                 </div>
             </div>
@@ -192,7 +226,14 @@
                         <div class="wire">CTA Button</div>
                         <div class="wire">Links and Search Here</div>
                     </div>
-                    <div class="wire center">Primary Menu Links Here</div>
+                    <div class="primary-menu-links center">
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Our Services</a>
+                        <a href="#">Our Locations</a>
+                        <a href="#">For Contractors</a>
+                    </div>
                 </div>
             </div>
         </div>

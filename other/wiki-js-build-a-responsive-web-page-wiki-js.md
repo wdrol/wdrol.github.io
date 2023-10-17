@@ -587,7 +587,7 @@ Ok, that's a lot of changes. Here is the full code listing so far:
         header .mobile  { display: none;  }
         header .desktop { display: block; }
 
-        @ media( max-width: 991px )
+        @media( max-width: 991px )
         {
             header .mobile  { display: block; }
             header .desktop { display: none;  }
@@ -662,11 +662,6 @@ Ok, that's a lot of changes. Here is the full code listing so far:
 </body>
 </html>
 ```
-
-<br>
-
-> If you're paying close attention, you may have noticed a syntax error in the previous code listing at line `52`. I had to put a space between the `@` character and `media` to avoid an unfortunate Wiki display issue. If you're copy/pasting the code from this Wiki, you'll need to remove the space so it reads `@media`.
-{.is-warning}
 
 <br>
 
@@ -800,7 +795,7 @@ Here is the final code listing for the wireframe pass. Congratulations! You shou
             justify-content: center;
         }
 
-        @ media( max-width: 768px )
+        @media( max-width: 768px )
         {
             .footer-links
             {
@@ -819,7 +814,7 @@ Here is the final code listing for the wireframe pass. Congratulations! You shou
         header .mobile  { display: none;  }
         header .desktop { display: block; }
 
-        @ media( max-width: 991px )
+        @media( max-width: 991px )
         {
             header .mobile  { display: block; }
             header .desktop { display: none;  }
@@ -936,11 +931,6 @@ Here is the final code listing for the wireframe pass. Congratulations! You shou
 
 <br>
 
-> Like earlier in this section, I had to put a space between the `@` character and `media` to avoid an unfortunate Wiki display issue (see line 60 above). This is a syntax error in CSS. If you're copy/pasting the code from this Wiki, you'll need to remove the space so it reads `@media`.
-{.is-warning}
-
-<br>
-
 Here is the finished wireframe page at large desktop size.
 
 ![wire-12.png](/solutions/development/build-a-responsive-web-page/wire-12.png =800x)
@@ -960,11 +950,7 @@ Wireframe page at mobile size.
 <br>
 
 ### Detail Pass
-Now for the fun part! We've already done the hard work in the wireframe pass above. The rest is making things look nice and maybe tweaking the responsive code a little bit to match the designs.
-
-Let's start by duplicating the `wireframe.html` file from last section. We named the duplicate `detail.html` and changed the title at line number `4` to `Detail`.
-
-We can finally begin to add some color to the page, as well as some basic styling and spacing. First, change the body tag style to this:
+Now for the fun part! We've already done the hard work in the wireframe pass above. The rest is making things look nice and maybe tweaking the responsive code a little bit to match the designs. Let's start by duplicating the `wireframe.html` file from last section. We named the duplicate `detail.html` and changed the title at line number `4` to `Detail`. We can finally begin to add some color to the page, as well as some basic styling and spacing. First, change the body tag style to this:
 
 ```html
 body
@@ -1031,7 +1017,7 @@ Then append the following new CSS to the style tag:
 
 <br>
 
-Let's remove the `wire` class from `header`, `main`, and `footer`. Only on those three lines. As you'll see, removing the `wire` class as we go is a nice way to work. When we look at the page in the browser, we can easily see which parts of the page we've updated, and which parts still need some work.
+Let's remove the `wire` class from `header`, `main`, and `footer`. Just on those three lines only. As you'll see, removing the `wire` class as we go is a nice way to work. When we look at the page in the browser, we can easily see which parts we've updated, and which parts still need some work.
 
 Before:
 
@@ -1055,7 +1041,7 @@ After:
 
 <br>
 
-In the main section, we changed the content to this:
+In the main section, please change the content to this:
 
 ```html
 <main>
@@ -1085,7 +1071,7 @@ In the main section, we changed the content to this:
 
 <br>
 
-Finally, let's change the logo HTML in the header (there are two of them, one in desktop, one in mobile) from this:
+Finally, let's change the logo HTML in the header (there are two of them, one for desktop, one for mobile) from this:
 
 `<div class="wire">Logo Here</div>`
 

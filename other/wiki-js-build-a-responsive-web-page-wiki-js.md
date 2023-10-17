@@ -1982,9 +1982,9 @@ Here is the updated header:
 
 <br>
 
-The last step is to remove all remaining `wire` classes. There are only two of them and they're both in the header. After removing them, I noticed a few minor spacing and color issues. They're all fixed and shown below, along with the finished code for the detail pass and screenshots. If you've stuck around this long, congratulations, you rock!
+The last step is to remove all remaining `wire` classes. There are only two of them and they're both in the header. After removing them, I noticed a few minor spacing and color issues. They're all fixed and shown below, along with the finished code for the detail pass and screenshots to match the design. If you've stuck around this long, congratulations, you rock!
 
-list changes here
+**TODO**: list changes here
 
 ```html
 <!DOCTYPE html>

@@ -40,6 +40,12 @@ Tablet Design (menu expanded)
 
 <br>
 
+Mobile Design
+
+![detail-12.png](/solutions/development/build-a-responsive-web-page/detail-12.png =400x)
+
+<br>
+
 Mobile Design (menu expanded)
 
 ![detail-11.png](/solutions/development/build-a-responsive-web-page/detail-11.png =400x)
@@ -2383,6 +2389,12 @@ Detail Pass Tablet (menu expanded)
 <br>
 
 Detail Pass Mobile
+
+![detail-12.png](/solutions/development/build-a-responsive-web-page/detail-12.png =400x)
+
+<br>
+
+Detail Pass Mobile (menu expanded)
 
 ![detail-11.png](/solutions/development/build-a-responsive-web-page/detail-11.png =400x)
 

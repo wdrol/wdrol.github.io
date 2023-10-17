@@ -6,7 +6,9 @@
     <style>
         body
         {
+            margin: 0;
             font-size: 18px;
+            background: #d9fff4;
             font-family: sans-serif;
         }
 
@@ -84,20 +86,59 @@
             border: 2px dashed #ccc;
         }
 
+        a
+        {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        footer .footer-links a
+        {
+            margin: 12px 0;
+            display: block;
+        }
+
         .logo
         {
             height: auto;
             max-width: 200px;
+            text-decoration: none;
+        }
+
+        header , footer
+        {
+            padding: 20px 0;
+            background: #d9fff4;
+        }
+
+        header
+        {
+            border-bottom: 1px solid #888;
+        }
+
+        footer
+        {
+            border-top: 1px solid #888;
+        }
+
+        main , .mobile-menu-content
+        {
+            background: white;
+        }
+
+        main
+        {
+            padding: 40px 0 25px 0;
         }
     </style>
 </head>
 
 <body>
-    <header class="wire">
+    <header>
         <div class="max-content-width">
             <div class="desktop">
                 <div class="flex-space-between">
-                    <img class="logo" src="logo.png" alt="logo" />
+                    <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
                     <div class="wire" style="width: 500px;">Links and Search Here</div>
                 </div>
                 <div class="flex-space-between">
@@ -107,7 +148,7 @@
             </div>
             <div class="mobile">
                 <div class="flex-space-between">
-                    <div class="wire">Logo Here</div>
+                    <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
                     <div class="wire mobile-menu-button">Menu</div>
                 </div>
                 <div class="wire mobile-menu-content">
@@ -121,18 +162,31 @@
         </div>
     </header>
 
-    <main class="wire">
+    <main>
         <div class="max-content-width">
-            <h1>Wireframe</h1>
+            <h1>About Us</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et doa aliqua.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-                Excepteur sint occaecat cupidatat non proident, ub officia deserunt mollid est laborum.
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
             </p>
         </div>
     </main>
 
-    <footer class="wire">
+    <footer>
         <div class="max-content-width">
             <div class="footer-links flex-centered">
                 <div class="wire">

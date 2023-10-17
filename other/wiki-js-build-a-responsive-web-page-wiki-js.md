@@ -10,6 +10,8 @@ This is a deep-dive on how to build a responsive web page from scratch. In Parts
 <br>
 
 ## Part One - Design
+> Work in Progress...
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
 **Explain desktop-first vs. mobile-first design strategies.**
@@ -678,7 +680,9 @@ Now let's have a closer look at the mobile content. The design requires an expan
 
 Lines `4` to `14` define the initial, hidden state of the mobile content. We're using a transition of 400ms (milliseconds) at line `13` to ensure a smooth reveal when the button is clicked. Lines `16` to `23` define the visible state of the content.
 
-For the Javascript, line `30` ensures we do not run the code until the DOM is ready. Line `38` is the button click handler. When we click the button, what really happens is that line `41` dynamically adds and removes a class named `expand` to the `mobile-menu-content` div in the DOM. If you inspect the page, you can actually see the `expand` class appear and disappear on that line of HTML. Because the CSS already has a definition for the expanded state at line `16`, it all seems to work like magic. Give it a try.
+For the Javascript, line `30` ensures we do not run the code until the DOM is ready. Line `38` is the button click handler. When we click the button, what really happens is that line `41` dynamically adds and removes a class named `expand` to the `mobile-menu-content` div in the DOM. If you inspect the page, you can actually see the `expand` class appear and disappear on that line of HTML when you click the button. Because the CSS already has a definition for the expanded state at line `16`, it all seems to work like magic.
+
+Give it a try. When you click the mobile menu button, it should now show and hide the mobile content with a nice smooth transition.
 
 ```html
 <style>
@@ -955,8 +959,388 @@ Wireframe page at mobile size.
 
 <br>
 
-### Detail Pass (high fidelity)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+### Detail Pass
+Now for the fun part! We've already done the hard work in the wireframe pass above. The rest is making things look nice and maybe tweaking the responsive code a little bit to match the designs.
+
+Let's start by duplicating the `wireframe.html` file from last section. We named the duplicate `detail.html` and changed the title at line number `4` to `Detail`.
+
+We can finally begin to add some color to the page, as well as some basic styling and spacing. First, change the body tag style to this:
+
+```html
+body
+{
+    margin: 0;
+    font-size: 18px;
+    background: #d9fff4;
+    font-family: sans-serif;
+}
+```
+
+Then append the following new CSS to the style tag:
+
+```html
+<style>
+    ...
+
+    a
+    {
+        color: #555;
+        text-decoration: underline;
+    }
+
+    footer .footer-links a
+    {
+        margin: 12px 0;
+        display: block;
+    }
+
+    .logo
+    {
+        height: auto;
+        max-width: 200px;
+        text-decoration: none;
+    }
+
+    header , footer
+    {
+        padding: 20px 0;
+        background: #d9fff4;
+    }
+
+    header
+    {
+        border-bottom: 1px solid #888;
+    }
+
+    footer
+    {
+        border-top: 1px solid #888;
+    }
+
+    main , .mobile-menu-content
+    {
+        background: white;
+    }
+
+    main
+    {
+        padding: 40px 0 25px 0;
+    }
+</style>
+```
+
+<br>
+
+Let's remove the `wire` class from `header`, `main`, and `footer`. Only on those three lines. As you'll see, removing the `wire` class as we go is a nice way to work. When we look at the page in the browser, we can easily see which parts of the page we've updated, and which parts still need some work.
+
+Before:
+
+```html
+<header class="wire">...</header>
+
+<main class="wire">...</main>
+
+<footer class="wire">...</footer>
+```
+
+After:
+
+```html
+<header>...</header>
+
+<main>...</main>
+
+<footer>...</footer>
+```
+
+<br>
+
+In the main section, we changed the content to this:
+
+```html
+<main>
+    <div class="max-content-width">
+        <h1>About Us</h1>
+        <p>
+            ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+            modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+            veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+            commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+            quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+        </p>
+        <p>
+            ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+            modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+            veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+            commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+            quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+        </p>
+    </div>
+</main>
+```
+
+<br>
+
+Finally, let's change the logo HTML in the header (there are two of them, one in desktop, one in mobile) from this:
+
+`<div class="wire">Logo Here</div>`
+
+To this:
+
+`<a href="#"><img class="logo" src="logo.png" alt="logo" /></a>`
+
+You can download the logo here:
+
+https://wdrol.github.io/other/responsive%20page/logo.png
+
+<br>
+
+Here is the full code listing so far:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body
+        {
+            margin: 0;
+            font-size: 18px;
+            background: #d9fff4;
+            font-family: sans-serif;
+        }
+
+        .wire
+        {
+            padding: 20px 30px;
+            margin-bottom: 20px; 
+            border: 2px dashed #ccc;
+        }
+
+        h1
+        {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .flex-space-between
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-centered
+        {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media( max-width: 768px )
+        {
+            .footer-links
+            {
+                flex-direction: column;
+            }
+        }
+
+        .max-content-width
+        {
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .center { text-align: center; }
+
+        header .mobile  { display: none;  }
+        header .desktop { display: block; }
+
+        @media( max-width: 991px )
+        {
+            header .mobile  { display: block; }
+            header .desktop { display: none;  }
+        }
+
+        .mobile-menu-content
+        {
+            height: 0;
+            padding: 0;
+            opacity: 0;
+            border: none;
+            overflow: hidden;
+            will-change: all;
+            margin-bottom: 0;
+            transition: all 400ms;
+        }
+
+        .mobile-menu-content.expanded
+        {
+            opacity: 1;
+            height: unset;
+            padding: 20px 30px;
+            margin-bottom: 20px; 
+            border: 2px dashed #ccc;
+        }
+
+        a
+        {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        footer .footer-links a
+        {
+            margin: 12px 0;
+            display: block;
+        }
+
+        .logo
+        {
+            height: auto;
+            max-width: 200px;
+            text-decoration: none;
+        }
+
+        header , footer
+        {
+            padding: 20px 0;
+            background: #d9fff4;
+        }
+
+        header
+        {
+            border-bottom: 1px solid #888;
+        }
+
+        footer
+        {
+            border-top: 1px solid #888;
+        }
+
+        main , .mobile-menu-content
+        {
+            background: white;
+        }
+
+        main
+        {
+            padding: 40px 0 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="max-content-width">
+            <div class="desktop">
+                <div class="flex-space-between">
+                    <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                    <div class="wire" style="width: 500px;">Links and Search Here</div>
+                </div>
+                <div class="flex-space-between">
+                    <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
+                    <div class="wire" style="width: 120px;">CTA Button</div>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="flex-space-between">
+                    <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                    <div class="wire mobile-menu-button">Menu</div>
+                </div>
+                <div class="wire mobile-menu-content">
+                    <div class="flex-centered">
+                        <div class="wire">CTA Button</div>
+                        <div class="wire">Links and Search Here</div>
+                    </div>
+                    <div class="wire center">Primary Menu Links Here</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="max-content-width">
+            <h1>About Us</h1>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="max-content-width">
+            <div class="footer-links flex-centered">
+                <div class="wire">
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                </div>
+                <div class="wire">
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                    <div><a href="#">Link Text Here</a></div>
+                </div>
+            </div>
+            <div class="wire center">Social Media Icons Here</div>
+            <div class="wire center">&copy;2023 Copyright Line Information</div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded' , function()
+        {
+            const button  = document.getElementsByClassName( 'mobile-menu-button'  )
+            const content = document.getElementsByClassName( 'mobile-menu-content' )
+
+            //----- Handle mobile menu button clicks.
+            if ( button.length > 0 && content.length > 0 )
+            {
+                button[0].addEventListener( 'click' , function()
+                {
+                    //----- Toggle mobile menu content.
+                    content[0].classList.toggle( 'expanded' )
+                })
+            }
+        })
+    </script>
+</body>
+</html>
+```
+
+<br>
+
+The page now looks like this in desktop.
+
+![detail-01.png](/solutions/development/build-a-responsive-web-page/detail-01.png =900x)
 
 <br>
 
@@ -966,6 +1350,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br>
 
 ## Part Three - Enhancements
+> Work in Progress...
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
 <br>

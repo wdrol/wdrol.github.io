@@ -1743,15 +1743,15 @@ Here is the full code listing so far:
 
 <br>
 
-There are three more updates needed to finish the header (desktop and mobile):
+Now that the footer is finished, let's have one last look at the header. There are three updates needed to finish the header (for desktop and mobile sizes):
 
 1. Add primary links.
 1. Add a new CTA button.
-1. Add links and search box.
+1. Add links and a search box.
 
 <br>
 
-For the primary menu links, please append the following CSS to the `style` tag.
+For the primary menu links, please see the updates below.
 
 > Lines `4` to `11` below are for needed for edge padding when the browser nears the maximum content width size, which has nothing to do with the primary menu links. I just noticed this issue once the `wire` class was removed, so we might as well handle it now.
 {.is-info}
@@ -1787,52 +1787,11 @@ For the primary menu links, please append the following CSS to the `style` tag.
         margin-right: 0;
     }
 </style>
-```
 
-<br>
-
-For the content changes, here is the header before:
-
-```html
 <header>
     <div class="max-content-width">
         <div class="desktop">
-            <div class="flex-space-between">
-                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
-                <div class="wire" style="width: 500px;">Links and Search Here</div>
-            </div>
-            <div class="flex-space-between">
-                <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
-                <div class="wire" style="width: 120px;">CTA Button</div>
-            </div>
-        </div>
-        <div class="mobile">
-            <div class="flex-space-between">
-                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
-                <div class="wire mobile-menu-button">Menu</div>
-            </div>
-            <div class="wire mobile-menu-content">
-                <div class="flex-centered">
-                    <div class="wire">CTA Button</div>
-                    <div class="wire">Links and Search Here</div>
-                </div>
-                <div class="wire center">Primary Menu Links Here</div>
-            </div>
-        </div>
-    </div>
-</header>
-```
-
-Here is the header after:
-
-```html
-<header>
-    <div class="max-content-width">
-        <div class="desktop">
-            <div class="flex-space-between">
-                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
-                <div class="wire" style="width: 500px;">Links and Search Here</div>
-            </div>
+            ...
             <div class="flex-space-between">
                 <div class="primary-menu-links">
                     <a href="#">Home</a>
@@ -1842,19 +1801,13 @@ Here is the header after:
                     <a href="#">Our Locations</a>
                     <a href="#">For Contractors</a>
                 </div>
-                <div class="wire" style="width: 120px;">CTA Button</div>
+                ...
             </div>
         </div>
         <div class="mobile">
-            <div class="flex-space-between">
-                <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
-                <div class="wire mobile-menu-button">Menu</div>
-            </div>
+            ...
             <div class="wire mobile-menu-content">
-                <div class="flex-centered">
-                    <div class="wire">CTA Button</div>
-                    <div class="wire">Links and Search Here</div>
-                </div>
+                ...
                 <div class="primary-menu-links center">
                     <a href="#">Home</a>
                     <a href="#">About Us</a>
@@ -1874,6 +1827,57 @@ Here is the header after:
 Here is the updated header:
 
 ![detail-04.png](/solutions/development/build-a-responsive-web-page/detail-04.png =900x)
+
+<br>
+
+For the CTA Button styles and content, here are the updates:
+
+```html
+<style>
+    ...
+
+    .cta-button
+    {
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 12px 24px;
+        border-radius: 8px;
+        background: #a55b9a;
+        text-transform: uppercase;
+    }
+</style>
+
+<header>
+    <div class="max-content-width">
+        <div class="desktop">
+            ...
+            <div class="flex-space-between">
+                ...
+                <button class="cta-button">CTA Button</button>
+            </div>
+        </div>
+        <div class="mobile">
+            ....
+            <div class="wire mobile-menu-content">
+                ...
+                <div class="flex-centered">
+                    <button class="cta-button">CTA Button</button>
+                    ...
+                </div>
+                ...
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+<br>
+
+Here is the updated header:
+
+![detail-05.png](/solutions/development/build-a-responsive-web-page/detail-05.png =900x)
 
 <br>
 

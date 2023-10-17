@@ -390,7 +390,7 @@ For brevity, here are the first three changes.
 
   .flex-centered
   {
-      gap: 20px;
+      gap: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -570,7 +570,7 @@ Ok, that's a lot of changes. Here is the full code listing so far:
 
         .flex-centered
         {
-            gap: 20px;
+            gap: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -789,7 +789,7 @@ Here is the final code listing for the wireframe pass. Congratulations! You shou
 
         .flex-centered
         {
-            gap: 20px;
+            gap: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1124,7 +1124,7 @@ Here is the full code listing so far:
 
         .flex-centered
         {
-            gap: 20px;
+            gap: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1330,14 +1330,427 @@ The page now looks like this in desktop.
 
 <br>
 
-### Cleanup Pass (web server)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+We can finish the `footer` with just a few more changes. First, let's change the existing footer links media query to the following to ensure proper alignment and spacing.
+
+```html
+@media( max-width: 768px )
+{
+    .footer-links
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-links > div
+    {
+        margin-bottom: 30px;
+    }
+}
+```
+
+We'll need a few other footer styles, please append these to the `style` tag.
+
+```html
+<style>
+    ...
+
+    .social , .copyright
+    {
+        margin: 20px 0;
+    }
+
+    .social a
+    {
+        margin: 0 6px;
+    }
+
+    .social img
+    {
+        width: auto;
+        opacity: .75;
+        max-height: 40px;
+        will-change: opacity;
+        transition: opacity 400ms;
+    }
+
+    .social img:hover
+    {
+        opacity: 1;
+    }
+
+    .copyright
+    {
+        color: #555;
+        font-size: 14px;
+    }
+</style>
+```
+
+The HTML content in the footer needs some minor updates. Basically, we're removing all of the `wire` classes inside the `footer` tag, and then updating some of the other HTML.
+
+Here is the footer before:
+
+```html
+<footer>
+    <div class="max-content-width">
+        <div class="footer-links flex-centered">
+            <div class="wire">
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+            </div>
+            <div class="wire">
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+                <div><a href="#">Link Text Here</a></div>
+            </div>
+        </div>
+        <div class="wire center">Social Media Icons Here</div>
+        <div class="wire center">&copy;2023 Copyright Line Information</div>
+    </div>
+</footer>
+```
+
+Here is the footer after:
+
+```html
+<footer>
+    <div class="max-content-width">
+        <div class="footer-links flex-centered">
+            <div>
+                <div><a href="#">Our Partners</a></div>
+                <div><a href="#">Our Supporters</a></div>
+                <div><a href="#">Foundation Members</a></div>
+                <div><a href="#">Additional Group Features</a></div>
+                <div><a href="#">Member Portal and Benefits</a></div>
+            </div>
+            <div>
+                <div><a href="#">New for this Year</a></div>
+                <div><a href="#">Privacy Information</a></div>
+                <div><a href="#">Changes from Last Year</a></div>
+                <div><a href="#">Roadmap and Announcements</a></div>
+                <div><a href="#">Disclosures and Regulations</a></div>
+            </div>
+        </div>
+        <div class="social center">
+            <a href="#"><img src="social-linkedin.png" alt="linkedin" title="linkedin" /></a>
+            <a href="#"><img src="social-youtube.png"  alt="youtube"  title="youtube"  /></a>
+            <a href="#"><img src="social-facebook.png" alt="facebook" title="facebook" /></a>
+        </div>
+        <div class="copyright center">&copy;2023 Copyright Information. All rights reserved.</div>
+    </div>
+</footer>
+```
+
+You can download the social media icons here:
+
+https://wdrol.github.io/other/responsive%20page/social-youtube.png
+
+https://wdrol.github.io/other/responsive%20page/social-linkedin.png
+
+https://wdrol.github.io/other/responsive%20page/social-facebook.png
+
+<br>
+
+After these changes, the footer should now match the design from desktop down to mobile:
+
+![detail-02.png](/solutions/development/build-a-responsive-web-page/detail-02.png =900x)
+
+![detail-03.png](/solutions/development/build-a-responsive-web-page/detail-03.png =400x)
+
+<br>
+
+Here is the full code listing so far:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body
+        {
+            margin: 0;
+            font-size: 18px;
+            background: #d9fff4;
+            font-family: sans-serif;
+        }
+
+        .wire
+        {
+            padding: 20px 30px;
+            margin-bottom: 20px; 
+            border: 2px dashed #ccc;
+        }
+
+        h1
+        {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .flex-space-between
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-centered
+        {
+            gap: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media( max-width: 768px )
+        {
+            .footer-links
+            {
+                display: block;
+                text-align: center;
+            }
+
+            .footer-links > div
+            {
+                margin-bottom: 30px;
+            }
+        }
+
+        .max-content-width
+        {
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .center { text-align: center; }
+
+        header .mobile  { display: none;  }
+        header .desktop { display: block; }
+
+        @media( max-width: 991px )
+        {
+            header .mobile  { display: block; }
+            header .desktop { display: none;  }
+        }
+
+        .mobile-menu-content
+        {
+            height: 0;
+            padding: 0;
+            opacity: 0;
+            border: none;
+            overflow: hidden;
+            will-change: all;
+            margin-bottom: 0;
+            transition: all 400ms;
+        }
+
+        .mobile-menu-content.expanded
+        {
+            opacity: 1;
+            height: unset;
+            padding: 20px 30px;
+            margin-bottom: 20px; 
+            border: 2px dashed #ccc;
+        }
+
+        a
+        {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        footer .footer-links a
+        {
+            margin: 12px 0;
+            display: block;
+        }
+
+        .logo
+        {
+            height: auto;
+            max-width: 200px;
+            text-decoration: none;
+        }
+
+        header , footer
+        {
+            padding: 20px 0;
+            background: #d9fff4;
+        }
+
+        header
+        {
+            border-bottom: 1px solid #888;
+        }
+
+        footer
+        {
+            border-top: 1px solid #888;
+        }
+
+        main , .mobile-menu-content
+        {
+            background: white;
+        }
+
+        main
+        {
+            padding: 40px 0 25px 0;
+        }
+
+        .social , .copyright
+        {
+            margin: 20px 0;
+        }
+
+        .social a
+        {
+            margin: 0 6px;
+        }
+
+        .social img
+        {
+            width: auto;
+            opacity: .75;
+            max-height: 40px;
+            will-change: opacity;
+            transition: opacity 400ms;
+        }
+
+        .social img:hover
+        {
+            opacity: 1;
+        }
+
+        .copyright
+        {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="max-content-width">
+            <div class="desktop">
+                <div class="flex-space-between">
+                    <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                    <div class="wire" style="width: 500px;">Links and Search Here</div>
+                </div>
+                <div class="flex-space-between">
+                    <div class="wire" style="width: 640px;">Primary Menu Links Here</div>
+                    <div class="wire" style="width: 120px;">CTA Button</div>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="flex-space-between">
+                    <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
+                    <div class="wire mobile-menu-button">Menu</div>
+                </div>
+                <div class="wire mobile-menu-content">
+                    <div class="flex-centered">
+                        <div class="wire">CTA Button</div>
+                        <div class="wire">Links and Search Here</div>
+                    </div>
+                    <div class="wire center">Primary Menu Links Here</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="max-content-width">
+            <h1>About Us</h1>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="max-content-width">
+            <div class="footer-links flex-centered">
+                <div>
+                    <div><a href="#">Our Partners</a></div>
+                    <div><a href="#">Our Supporters</a></div>
+                    <div><a href="#">Foundation Members</a></div>
+                    <div><a href="#">Additional Group Features</a></div>
+                    <div><a href="#">Member Portal and Benefits</a></div>
+                </div>
+                <div>
+                    <div><a href="#">New for this Year</a></div>
+                    <div><a href="#">Privacy Information</a></div>
+                    <div><a href="#">Changes from Last Year</a></div>
+                    <div><a href="#">Roadmap and Announcements</a></div>
+                    <div><a href="#">Disclosures and Regulations</a></div>
+                </div>
+            </div>
+            <div class="social center">
+                <a href="#"><img src="social-linkedin.png" alt="linkedin" title="linkedin" /></a>
+                <a href="#"><img src="social-youtube.png"  alt="youtube"  title="youtube"  /></a>
+                <a href="#"><img src="social-facebook.png" alt="facebook" title="facebook" /></a>
+            </div>
+            <div class="copyright center">&copy;2023 Copyright Information. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded' , function()
+        {
+            const button  = document.getElementsByClassName( 'mobile-menu-button'  )
+            const content = document.getElementsByClassName( 'mobile-menu-content' )
+
+            //----- Handle mobile menu button clicks.
+            if ( button.length > 0 && content.length > 0 )
+            {
+                button[0].addEventListener( 'click' , function()
+                {
+                    //----- Toggle mobile menu content.
+                    content[0].classList.toggle( 'expanded' )
+                })
+            }
+        })
+    </script>
+</body>
+</html>
+```
 
 <br>
 
 ## Part Three - Enhancements
 > Work in Progress...
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+
+<br>
+
+### Cleanup for Web Server
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
 <br>

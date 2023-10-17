@@ -34,7 +34,7 @@
 
         .flex-centered
         {
-            gap: 20px;
+            gap: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,7 +44,13 @@
         {
             .footer-links
             {
-                flex-direction: column;
+                display: block;
+                text-align: center;
+            }
+
+            .footer-links > div
+            {
+                margin-bottom: 30px;
             }
         }
 
@@ -130,6 +136,36 @@
         {
             padding: 40px 0 25px 0;
         }
+
+        .social , .copyright
+        {
+            margin: 20px 0;
+        }
+
+        .social a
+        {
+            margin: 0 6px;
+        }
+
+        .social img
+        {
+            width: auto;
+            opacity: .75;
+            max-height: 40px;
+            will-change: opacity;
+            transition: opacity 400ms;
+        }
+
+        .social img:hover
+        {
+            opacity: 1;
+        }
+
+        .copyright
+        {
+            color: #555;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -189,25 +225,27 @@
     <footer>
         <div class="max-content-width">
             <div class="footer-links flex-centered">
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
+                <div>
+                    <div><a href="#">Our Partners</a></div>
+                    <div><a href="#">Our Supporters</a></div>
+                    <div><a href="#">Foundation Members</a></div>
+                    <div><a href="#">Additional Group Features</a></div>
+                    <div><a href="#">Member Portal and Benefits</a></div>
                 </div>
-                <div class="wire">
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
-                    <div><a href="#">Link Text Here</a></div>
+                <div>
+                    <div><a href="#">New for this Year</a></div>
+                    <div><a href="#">Privacy Information</a></div>
+                    <div><a href="#">Changes from Last Year</a></div>
+                    <div><a href="#">Roadmap and Announcements</a></div>
+                    <div><a href="#">Disclosures and Regulations</a></div>
                 </div>
             </div>
-            <div class="wire center">Social Media Icons Here</div>
-            <div class="wire center">&copy;2023 Copyright Line Information</div>
+            <div class="social center">
+                <a href="#"><img src="social-linkedin.png" alt="linkedin" title="linkedin" /></a>
+                <a href="#"><img src="social-youtube.png"  alt="youtube"  title="youtube"  /></a>
+                <a href="#"><img src="social-facebook.png" alt="facebook" title="facebook" /></a>
+            </div>
+            <div class="copyright center">&copy;2023 Copyright Information. All rights reserved.</div>
         </div>
     </footer>
 

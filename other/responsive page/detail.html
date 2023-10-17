@@ -205,6 +205,24 @@
             background: #a55b9a;
             text-transform: uppercase;
         }
+
+        .search
+        {
+            text-align: right;
+        }
+
+        .search a
+        {
+            margin-right: 20px;
+        }
+
+        .search input[type=text]
+        {
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #888;
+        }
     </style>
 </head>
 
@@ -214,7 +232,11 @@
             <div class="desktop">
                 <div class="flex-space-between">
                     <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
-                    <div class="wire" style="width: 500px;">Links and Search Here</div>
+                    <div class="search">
+                        <a href="#">Account</a>
+                        <a href="#">Sign In</a>
+                        <input type="text" placeholder="Search:" name="q" />
+                    </div>
                 </div>
                 <div class="flex-space-between">
                     <div class="primary-menu-links">
@@ -236,7 +258,9 @@
                 <div class="wire mobile-menu-content">
                     <div class="flex-centered">
                         <button class="cta-button">CTA Button</button>
-                        <div class="wire">Links and Search Here</div>
+                        <div class="search">
+                            <input type="text" placeholder="Search:" name="q" />
+                        </div>
                     </div>
                     <div class="primary-menu-links center">
                         <a href="#">Home</a>

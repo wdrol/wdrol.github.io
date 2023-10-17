@@ -1743,11 +1743,12 @@ Here is the full code listing so far:
 
 <br>
 
-Now that the footer is finished, let's have one last look at the header. There are three updates needed to finish the header (for desktop and mobile sizes):
+Now that the footer is finished, let's have one last look at the header. There are four updates needed to finish the header (for desktop and mobile sizes):
 
 1. Add primary links.
 1. Add a new CTA button.
 1. Add links and a search box.
+1. Remove all remaining `wire` classes.
 
 <br>
 
@@ -1878,6 +1879,68 @@ For the CTA Button styles and content, here are the updates:
 Here is the updated header:
 
 ![detail-05.png](/solutions/development/build-a-responsive-web-page/detail-05.png =900x)
+
+<br>
+
+For the links and searchbox, here are the updates:
+
+```html
+<style>
+    ...
+
+    .search
+    {
+        text-align: right;
+    }
+
+    .search a
+    {
+        margin-right: 20px;
+    }
+
+    .search input[type=text]
+    {
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 1px solid #888;
+    }
+</style>
+
+<header>
+    <div class="max-content-width">
+        <div class="desktop">
+            <div class="flex-space-between">
+                ...
+                <div class="search">
+                    <a href="#">Account</a>
+                    <a href="#">Sign In</a>
+                    <input type="text" placeholder="Search:" name="q" />
+                </div>
+            </div>
+            ...
+        </div>
+        <div class="mobile">
+            ...
+            <div class="wire mobile-menu-content">
+                <div class="flex-centered">
+                    ...
+                    <div class="search">
+                        <input type="text" placeholder="Search:" name="q" />
+                    </div>
+                </div>
+                ...
+            </div>
+        </div>
+    </div>
+</header>
+```
+
+<br>
+
+Here is the updated header:
+
+![detail-06.png](/solutions/development/build-a-responsive-web-page/detail-06.png =900x)
 
 <br>
 

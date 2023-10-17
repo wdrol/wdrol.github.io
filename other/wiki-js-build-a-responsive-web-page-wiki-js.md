@@ -16,6 +16,38 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 **Explain desktop-first vs. mobile-first design strategies.**
 
+Large Desktop Design
+
+![detail-07.png](/solutions/development/build-a-responsive-web-page/detail-07.png =900x)
+
+<br>
+
+Laptop Design
+
+![detail-08.png](/solutions/development/build-a-responsive-web-page/detail-08.png =900x)
+
+<br>
+
+Tablet Design
+
+![detail-09.png](/solutions/development/build-a-responsive-web-page/detail-09.png =700x)
+
+<br>
+
+Tablet Design (menu expanded)
+
+![detail-10.png](/solutions/development/build-a-responsive-web-page/detail-10.png =700x)
+
+<br>
+
+Mobile Design (menu expanded)
+
+![detail-11.png](/solutions/development/build-a-responsive-web-page/detail-11.png =400x)
+
+<br>
+
+
+
 <br>
 
 ## Part Two - Implementation
@@ -2328,31 +2360,31 @@ list changes here
 
 Detail Pass Large Desktop
 
-screen
+![detail-07.png](/solutions/development/build-a-responsive-web-page/detail-07.png =900x)
 
 <br>
 
-Detail Pass Laptop / Tablet
+Detail Pass Laptop
 
-screen
+![detail-08.png](/solutions/development/build-a-responsive-web-page/detail-08.png =900x)
+
+<br>
+
+Detail Pass Tablet
+
+![detail-09.png](/solutions/development/build-a-responsive-web-page/detail-09.png =700x)
+
+<br>
+
+Detail Pass Tablet (menu expanded)
+
+![detail-10.png](/solutions/development/build-a-responsive-web-page/detail-10.png =700x)
 
 <br>
 
 Detail Pass Mobile
 
-screen
-
-<br>
-
-Detail Pass Mobile (menu expanded)
-
-screen
-
-<br>
-
-Detail Pass Small Mobile
-
-screen
+![detail-11.png](/solutions/development/build-a-responsive-web-page/detail-11.png =400x)
 
 <br>
 

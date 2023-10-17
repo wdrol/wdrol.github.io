@@ -71,6 +71,12 @@
             header .desktop { display: none;  }
         }
 
+        .mobile-menu-button
+        {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
         .mobile-menu-content
         {
             height: 0;
@@ -87,9 +93,6 @@
         {
             opacity: 1;
             height: unset;
-            padding: 20px 30px;
-            margin-bottom: 20px; 
-            border: 2px dashed #ccc;
         }
 
         a
@@ -127,7 +130,7 @@
             border-top: 1px solid #888;
         }
 
-        main , .mobile-menu-content
+        main
         {
             background: white;
         }
@@ -206,6 +209,14 @@
             text-transform: uppercase;
         }
 
+        @media( max-width: 500px )
+        {
+            .mobile .cta-button
+            {
+                display: none;
+            }
+        }
+
         .search
         {
             text-align: right;
@@ -223,6 +234,21 @@
             border-radius: 8px;
             border: 1px solid #888;
         }
+
+        .pt-20
+        {
+            padding-top: 20px;
+        }
+
+        .mb-10
+        {
+            margin-bottom: 10px;
+        }
+
+        .mb-20
+        {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -230,7 +256,7 @@
     <header>
         <div class="max-content-width">
             <div class="desktop">
-                <div class="flex-space-between">
+                <div class="flex-space-between mb-10">
                     <a href="#"><img class="logo" src="logo.png" alt="logo" /></a>
                     <div class="search">
                         <a href="#">Account</a>
@@ -256,7 +282,7 @@
                     <div class="mobile-menu-button">Menu</div>
                 </div>
                 <div class="mobile-menu-content">
-                    <div class="flex-centered">
+                    <div class="flex-centered pt-20 mb-20">
                         <button class="cta-button">CTA Button</button>
                         <div class="search">
                             <input type="text" placeholder="Search:" name="q" />

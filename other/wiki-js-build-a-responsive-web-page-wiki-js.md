@@ -71,7 +71,7 @@ So let's begin. If you want to follow along, create a new text file named `wiref
 > The code listings below can be copy/pasted. Hover over the code. You should see a `Copy` button appear in the upper-right corner of the listing.
 {.is-info}
 
-Here is the HTML version of Hello World. This is bare minimum for any web page. If you have a look at this in your browser, your see the word **Wireframe** on an empty page. The most important part is line number `5` below. This meta tag is required on every page that needs responsive coding.
+Here is the HTML version of Hello World. This is bare minimum for any web page. If you have a look at this in your browser, you should see the word **Wireframe** on an empty page. The most important part is line number `5` below. This meta tag is required on every page that needs responsive coding.
 
 ```html
 <!DOCTYPE html>
@@ -90,11 +90,11 @@ Here is the HTML version of Hello World. This is bare minimum for any web page. 
 
 Let's add some styles and content.
 
-Lines `6 to 12` below is the CSS, and lines `15 to 20` is the content. Normally, we would put the CSS into its own text file, but for simplicity, we'll keep everything in one file for now. Later, in a cleanup pass, we'll learn how to be more formal and prepare our code for a web server.
+Lines `6 to 12` below is the CSS and lines `15 to 20` is the content. Normally, we would put the CSS into its own text file, but for simplicity, we'll keep everything in one file for now. Later, in a cleanup pass, we'll learn how to prepare our code for a web server with a more structured file system.
 
 Line `9` below sets the default font size for the page to 18 pixels. For simplicity, we're going to use pixel units (px) during the wireframe pass. Units are a big topic. If you want to learn more, here's a great blog post: https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/
 
-Line `10` below sets the default font for the page to `sans-serif`, which is intentionally non-specific. This forces the browser to make the decision about which sans serif font it should actually use. Like just about everything else in this section, it's a detail we don't need to care about yet, so let the browser decide.
+Line `10` below sets the default font for the page to `sans-serif`, which is intentionally non-specific. This forces the browser to make the decision about which sans serif font it should actually use. Like just about everything else in the wireframe pass, it's a detail we don't care about yet, so let the browser decide.
 
 ```html
 <!DOCTYPE html>
@@ -484,7 +484,7 @@ For the fourth change, we need to add some `width` cheats to our existing header
 
 <br>
 
-So what is the point of cheating the widths like this? One of the basic tenets in responsive coding is letting the content drive the code, not the other way around. If you have a look at the two screens below, notice the amount of horizontal white space between the Primary Menu Links and the CTA Button. There is plenty of available space at the large desktop size, but we've run out of room at the laptop size and smaller. We wouldn't have noticed this without the width cheats, unless we had entered the real content and styles, which defeats the purpose of a fast wireframe pass.
+So what is the point of cheating the widths like this? One of the basic tenets in responsive coding is letting the content drive the code, not the other way around. If you have a look at the two screens below, notice the amount of horizontal white space between the Primary Menu Links and the CTA Button. There is plenty of available space at the large desktop size, but we run out of room at the laptop size and smaller. We wouldn't have noticed this without the width cheats, unless we had entered the real content and styles, which defeats the purpose of a fast wireframe pass.
 
 Now that we can see in the browser where we run out of space in the header, we can adapt and switch over to the mobile wireframes (which we haven't coded yet). The important part is that we're not inventing the switch over point first and hoping the content will fit, we're letting the content dictate when we switch to mobile.
 
@@ -514,7 +514,7 @@ So looking at laptop screen above, it appears that we're running out of horizont
 
 You can think of line `1` above like an if statement that reads:
 
-*if your browswer or device is less than 991 pixels wide, do the following.*
+*if your browswer or device is less than or equal to 991 pixels wide, do the following.*
 
 For the header, we're only concerned with two things, are we in desktop mode or mobile mode? We can model this in CSS with two new classes and a media query like so:
 
@@ -703,7 +703,7 @@ Ok, that's a lot of changes. Here is the full code listing so far:
 
 <br>
 
-So this is what the page looks like when the browser width drops below 991 pixels. Give it a try to see how it changes as you increase and decrease the width of your browser. If you made it this far and haven't built responsive web pages before, congratulations!
+So this is what the page looks like when the browser width is 991 pixels or smaller. Give it a try to see how it updates as you change the width of your browser. If you made it this far and haven't built responsive web pages before, congratulations on your first success!
 
 ![wire-08.png](/solutions/development/build-a-responsive-web-page/wire-08.png =900x)
 

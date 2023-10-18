@@ -13,7 +13,7 @@ There are two major web design strategies that have been in use since the early 
 
 **2. Desktop-First** designs target desktop layouts first (starting with largest desktop sizes) with the goal of defining all possible content that can fit on large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
 
-For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I encountered a true mobile-first design. Therefore, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll follow the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site:
+For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I encountered a true mobile-first design. Therefore, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll follow the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site that we'll be building in Part Two:
 
 <br>
 

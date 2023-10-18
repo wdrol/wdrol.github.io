@@ -59,7 +59,7 @@ In this part, we're going to focus solely on the Html and Css building blocks. W
 <br>
 
 ### Wireframe Pass
-Let's begin with a wireframe pass to build out the page at low detail. This version will be a simple blocky page, with black and white text and no images. By eliminating distrations, we can understand how blocks on the page behave as we transition between mobile and desktop sizes in the browser. This will also minimize the amount of CSS needed at first.
+Let's begin with a wireframe pass to build out the page at low detail. This version will be a simple blocky page, with black and white text and no images. By eliminating distrations, we can better understand how the page behaves as we transition between mobile and desktop sizes. This will also minimize the amount of CSS needed in the beginning.
 
 By the end of this section, we'll have a fully functional responsive page. In the next section, the detail pass, we'll add all the other parts like font sizes, colors, backgrounds, images, and icons.
 

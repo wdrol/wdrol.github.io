@@ -10,14 +10,11 @@ This is a deep-dive on how to build a responsive web page from scratch. In Parts
 <br>
 
 ## Part One - Design
-There are two major web design strategies that have been in use since the early days of responsive web sites:
+There are two major web design strategies that have been in use since the early days of responsive web sites.
 
-1. The Mobile-First Design Strategy
-1. The Desktop-First Design Strategy
+**1. Mobile-First** designs target mobile patterns and layouts first (starting with smallest mobile devices) with the goal of creating the optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences on those platforms. Mobile-first is trying to create an optimal win-win situation for everyone.
 
-**Mobile-First** designs target mobile patterns and layouts first (starting with smallest mobile devices) with the goal of creating the optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences on those platforms. Mobile-first is trying to create an optimal win-win situation for everyone.
-
-**Desktop-First** designs target desktop patterns and layouts first (starting with large desktop sizes) with the goal of defining all possible content that can fit on these large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
+**2. Desktop-First** designs target desktop patterns and layouts first (starting with large desktop sizes) with the goal of defining all possible content that can fit on these large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
 
 For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I worked with a true mobile-first design. I know they're out there, but I never seem to encounter them in the wild.
 
@@ -789,7 +786,7 @@ There's one last thing we need to finish the wireframe pass. In the footer, ther
 }
 ```
 
-Line 5 above sets the flex-direction to column (the default value is row) which causes the two blocks to stack vertically.
+Line `5` above sets the flex-direction to column (the default value is row) which causes the two blocks to stack vertically.
 
 The `768px` on line `1` above is a guess and may need to be adjusted later. We could have put in width cheats just like we did with the header, but we won't pursue that here and now. Feel free to try that on your own as an exercise. In the next section, the detail pass, there will be plenty of opportunities to adjust the `768px` if needed.
 

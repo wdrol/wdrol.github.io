@@ -54,7 +54,7 @@ For better or worst, most of the web designs we see these days are **desktop-fir
 <br>
 
 ## Part Two - Coding
-In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three below, we'll learn how technologies like Bootstrap, Angular, and React impact what we're building here.
+In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three, we'll learn how technologies like Bootstrap, Angular, and React impact what we're building here.
 
 <br>
 

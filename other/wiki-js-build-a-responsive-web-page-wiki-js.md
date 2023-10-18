@@ -1,4 +1,4 @@
-> **Prerequisites** basic knowledge of Html and Css, a browser, and simple text editor. There is a small amount of Javascript in this article, but just in one section.
+> **Prerequisites** basic knowledge of Html and Css, a browser and text editor. There is a small amount of Javascript in this article, but just in one section.
 
 # How to Build a Responsive Web Page
 This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap, Sitecore, SXA, React, and Angular to learn how those technologies impact our implementation.
@@ -12,13 +12,13 @@ This is a deep-dive on how to build a responsive web page from scratch. In Parts
 ## Part One - Design
 There are two major web design strategies that have been in use since the early days of responsive web sites.
 
-**1. Mobile-First** designs target mobile patterns and layouts first (starting with smallest mobile devices) with the goal of creating the optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences on those platforms. Mobile-first is trying to create an optimal win-win situation for everyone.
+**1. Mobile-First** designs target mobile layouts first (starting with smallest mobile devices) with the goal of creating the optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences on those platforms. Mobile-first is trying to create a win-win situation for everyone.
 
-**2. Desktop-First** designs target desktop patterns and layouts first (starting with large desktop sizes) with the goal of defining all possible content that can fit on these large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
+**2. Desktop-First** designs target desktop layouts first (starting with largest desktop sizes) with the goal of defining all possible content that can fit on large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
 
 For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I worked with a true mobile-first design. I know they're out there, but I never seem to encounter them in the wild.
 
-Given all that, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll be following the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site:
+Therefore, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll follow the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site:
 
 **Large Desktop Design**
 

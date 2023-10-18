@@ -1984,7 +1984,17 @@ Here is the updated header:
 
 The last step is to remove all remaining `wire` classes. There are only two of them and they're both in the header. After removing them, I noticed a few minor spacing and color issues. They're all fixed and shown below, along with the finished code for the detail pass and screenshots to match the design. If you've stuck around this long, congratulations, you rock!
 
-**TODO**: list changes here
+- Lines `74` to `78` below - added `.mobile-menu-button` class
+
+- Line `133` below - changed `main , .mobile-menu-content` to just `main`
+
+- Lines `208` to `214` below - added media query
+
+- Lines `234` to `247` below - added spacing utility classes
+
+- Line `255` below - added `mb-10` class
+
+- Line `281` below - added `pt-20 mb-20` classes
 
 ```html
 <!DOCTYPE html>
@@ -2122,10 +2132,6 @@ The last step is to remove all remaining `wire` classes. There are only two of t
         main
         {
             background: white;
-        }
-
-        main
-        {
             padding: 40px 0 25px 0;
         }
 
@@ -2364,37 +2370,37 @@ The last step is to remove all remaining `wire` classes. There are only two of t
 
 <br>
 
-Detail Pass Large Desktop
+**Detail Pass Large Desktop**
 
 ![detail-07.png](/solutions/development/build-a-responsive-web-page/detail-07.png =900x)
 
 <br>
 
-Detail Pass Laptop
+**Detail Pass Laptop**
 
 ![detail-08.png](/solutions/development/build-a-responsive-web-page/detail-08.png =900x)
 
 <br>
 
-Detail Pass Tablet
+**Detail Pass Tablet**
 
 ![detail-09.png](/solutions/development/build-a-responsive-web-page/detail-09.png =700x)
 
 <br>
 
-Detail Pass Tablet (menu expanded)
+**Detail Pass Tablet (menu expanded)**
 
 ![detail-10.png](/solutions/development/build-a-responsive-web-page/detail-10.png =700x)
 
 <br>
 
-Detail Pass Mobile
+**Detail Pass Mobile**
 
 ![detail-12.png](/solutions/development/build-a-responsive-web-page/detail-12.png =400x)
 
 <br>
 
-Detail Pass Mobile (menu expanded)
+**Detail Pass Mobile (menu expanded)**
 
 ![detail-11.png](/solutions/development/build-a-responsive-web-page/detail-11.png =400x)
 

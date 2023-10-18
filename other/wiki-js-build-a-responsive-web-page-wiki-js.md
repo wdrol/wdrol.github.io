@@ -10,49 +10,52 @@ This is a deep-dive on how to build a responsive web page from scratch. In Parts
 <br>
 
 ## Part One - Design
-> Work in Progress...
+There are two major web design strategies that have been in use since the early days of responsive web sites:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+1. The Mobile-First Design Strategy
+1. The Desktop-First Design Strategy
 
-**Explain desktop-first vs. mobile-first design strategies.**
+**Mobile-First** designs target mobile patterns and layouts first (starting with smallest mobile devices) with the goal of creating the optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences on those platforms. Mobile-first is trying to create an optimal win-win situation for everyone.
 
-Large Desktop Design
+**Desktop-First** designs target desktop patterns and layouts first (starting with large desktop sizes) with the goal of defining all possible content that can fit on these large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
+
+For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I worked with a true mobile-first design. I know they're out there, but I never seem to encounter them in the wild.
+
+Given all that, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll be following the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site:
+
+**Large Desktop Design**
 
 ![detail-07.png](/solutions/development/build-a-responsive-web-page/detail-07.png =900x)
 
 <br>
 
-Laptop Design
+**Laptop Design**
 
 ![detail-08.png](/solutions/development/build-a-responsive-web-page/detail-08.png =900x)
 
 <br>
 
-Tablet Design
+**Tablet Design**
 
 ![detail-09.png](/solutions/development/build-a-responsive-web-page/detail-09.png =700x)
 
 <br>
 
-Tablet Design (menu expanded)
+**Tablet Design (menu expanded)**
 
 ![detail-10.png](/solutions/development/build-a-responsive-web-page/detail-10.png =700x)
 
 <br>
 
-Mobile Design
+**Mobile Design**
 
 ![detail-12.png](/solutions/development/build-a-responsive-web-page/detail-12.png =400x)
 
 <br>
 
-Mobile Design (menu expanded)
+**Mobile Design (menu expanded)**
 
 ![detail-11.png](/solutions/development/build-a-responsive-web-page/detail-11.png =400x)
-
-<br>
-
-
 
 <br>
 

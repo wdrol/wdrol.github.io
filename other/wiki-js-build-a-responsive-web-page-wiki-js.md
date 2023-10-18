@@ -3,12 +3,9 @@
 # How to Build a Responsive Web Page
 This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap, Sitecore, SXA, React, and Angular to learn how those technologies impact our implementation.
 
-1. Design
-2. Implementation
-3. Enhancements
-
 <br>
 
+# Tabs {.tabset}
 ## Part One - Design
 There are two major web design strategies that have been in use since the early days of responsive web sites.
 
@@ -16,9 +13,9 @@ There are two major web design strategies that have been in use since the early 
 
 **2. Desktop-First** designs target desktop layouts first (starting with largest desktop sizes) with the goal of defining all possible content that can fit on large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
 
-For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I worked with a true mobile-first design. I know they're out there, but I never seem to encounter them in the wild.
+For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I encountered a true mobile-first design. Therefore, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll follow the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site:
 
-Therefore, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll follow the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site:
+<br>
 
 **Large Desktop Design**
 
@@ -56,8 +53,8 @@ Therefore, the designs below are **desktop-first**. As we proceed through the co
 
 <br>
 
-## Part Two - Implementation
-Part Two is the implementation of the design. In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three below, we'll learn how technologies like Bootstrap, Angular, and React impact what we're building here.
+## Part Two - Coding
+In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three below, we'll learn how technologies like Bootstrap, Angular, and React impact what we're building here.
 
 <br>
 

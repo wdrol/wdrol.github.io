@@ -26,11 +26,12 @@ Example:
 <div class="mx-3 mx-md-5 px-3 px-md-5">Example Line</div>
 ```
 
-**mx-3** sets level 3 horizontal margin on all devices.
-**mx-md-5** set level 5 horizontal margin at the md breakpoint and higher.
-
-**px-3** sets level 3 horizontal padding on all devices.
-**px-md-5** set level 5 horizontal padding at the md breakpoint and higher.
+| Class   | Description                                                     |
+|---------|-----------------------------------------------------------------|
+| mx-3    | sets level 3 horizontal margin on all devices                   |
+| mx-md-5 | sets level 5 horizontal margin at the md breakpoint and higher  |
+| px-3    | sets level 3 horizontal padding on all devices                  |
+| px-md-5 | sets level 5 horizontal padding at the md breakpoint and higher |
 
 https://getbootstrap.com/docs/5.3/layout/utilities/
 

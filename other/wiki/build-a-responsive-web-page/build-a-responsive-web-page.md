@@ -1116,7 +1116,7 @@ To this:
 
 You can download the logo here:
 
-https://wdrol.github.io/other/responsive%20page/logo.png
+https://wdrol.github.io/other/wiki/build-a-responsive-web-page/flat/logo.png
 
 <br>
 
@@ -1485,11 +1485,11 @@ Here is the footer after:
 
 You can download the social media icons here:
 
-https://wdrol.github.io/other/responsive%20page/social-youtube.png
+https://wdrol.github.io/other/wiki/build-a-responsive-web-page/flat/social-youtube.png
 
-https://wdrol.github.io/other/responsive%20page/social-linkedin.png
+https://wdrol.github.io/other/wiki/build-a-responsive-web-page/flat/social-linkedin.png
 
-https://wdrol.github.io/other/responsive%20page/social-facebook.png
+https://wdrol.github.io/other/wiki/build-a-responsive-web-page/flat/social-facebook.png
 
 <br>
 

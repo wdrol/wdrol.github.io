@@ -5,7 +5,7 @@ This wiki page is a collection of core front-end rules for back-end developers (
 
 # Tabs {.tabset}
 
-## Bootstrap
+## BOOTSTRAP
 At the time of this writing, the latest version is 5.3 and the documentation is at: 
 
 https://getbootstrap.com/docs/5.3/getting-started/introduction/

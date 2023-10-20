@@ -279,10 +279,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Easiest way to get querystring values in JS:
 
 ```javascript
-var href = new URL( window.location.href );
-var parm = new URLSearchParams( href.search );
-var size = params.get( 'size' );
-var page = params.get( 'page' );
+var a = new URL( window.location.href );
+var b = new URLSearchParams( a.search );
+var c = b.get( 'size' );
+var d = b.get( 'page' );
 ```
 
 <br>

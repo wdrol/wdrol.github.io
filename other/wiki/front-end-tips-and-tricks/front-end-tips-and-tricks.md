@@ -292,7 +292,7 @@ var page = params.get( 'page' );
 
 Easily manage multiple versions of Node.js in Windows.
 
-This is *THE* Windows version, not the same as the original nvm.
+This is *THE* Windows version to use, not the same as the original nvm.
 
 https://github.com/coreybutler/nvm-windows
 

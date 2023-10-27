@@ -288,7 +288,7 @@ var d = b.get( 'page' );
 <br>
 <hr>
 
-**Node Version Manager for Window**
+**Node Version Manager for Windows**
 
 Easily manage multiple versions of Node.js in Windows.
 

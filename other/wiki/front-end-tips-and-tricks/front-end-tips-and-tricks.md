@@ -202,6 +202,42 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <br>
 
+**Take Advantage of Hardware Acceleration**
+
+Use `will-change` to make transitions smoother with hardware acceleration. On device/browser combinations that do not support it, this will simply be ignored and have no negative impact.
+
+```html
+<!-- Without will-change (no hardware acceleration). -->
+<style>
+  .my-class
+  {
+    color: yellow;
+    background: red;
+    transition: color, background 400ms;
+  }
+</style>
+
+<div class="my-class">...</div>
+```
+
+```html
+<!-- With will-change (use hardware acceleration if available). -->
+<style>
+  .my-class
+  {
+    color: yellow;
+    background: red;
+    will-change: color, background;
+    transition: color, background 400ms;
+  }
+</style>
+
+<div class="my-class">...</div>
+```
+
+<br>
+<hr>
+
 **Until Attr is Fully Supported**
 
 Until Attr is fully supported, this works nicely!
@@ -220,13 +256,6 @@ https://caniuse.com/css3-attr
 Sometimes we need to add decorative items onto elements (i.e. non-standard dropdown list arrows, etc.) but doing this can interfere with access to the element. Use `pointer-events: none;` to remove the interference of decorative items.
 
 https://stackoverflow.com/questions/25777599/css-after-content-below-a-select-element-causes-click-not-to-work
-
-<br>
-<hr>
-
-**Topic Name**
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
 <br>
 <hr>

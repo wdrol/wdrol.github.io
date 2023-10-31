@@ -25,7 +25,7 @@ Bootstrap has two container classes: `container` and `container-fluid.` Many dev
 
 **Bootstrap Utility Classes**
 
-Some developers, including front-end developers, forget that Bootstrap is much more than a responsive grid system. As such, they tend to overuse the grid, often in situations where a grid is not even necessary. There is a large number of responsive utility classes to easily handle tedious CSS tasks (without using the grid and without adding custom CSS or media queries to your code).
+Bootstrap is more than a responsive grid system. Developers tend to overuse the Bootstrap grid, often in situations where a grid is not even necessary. There is a large number of responsive utility classes to easily handle tedious CSS tasks (without using the grid and without adding custom CSS or media queries to your code).
 
 Example:
 

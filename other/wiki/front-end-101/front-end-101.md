@@ -18,7 +18,7 @@ https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 **Bootstrap Container Classes**
 
-Bootstrap has two container classes: `container` and `container-fluid` but some developers, including Sitecore developers, often misuse them. In general, you should only need to use `container` or `container-fluid` **once per page** at a very high level in the dom hierarchy. Use `container-fluid` when you need to support full-width, edge-to-edge designs. Use `container` when you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
+Bootstrap has two container classes: `container` and `container-fluid.` Many developers completely misuse them. In general, you should only need to use `container` or `container-fluid` **once per page** at a very high level in the dom hierarchy. Use `container-fluid` when you need to support full-width, edge-to-edge designs. Use `container` when you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
 
 <br>
 <hr>

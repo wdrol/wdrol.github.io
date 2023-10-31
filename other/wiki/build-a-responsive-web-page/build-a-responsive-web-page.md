@@ -1,19 +1,19 @@
 > **Prerequisites** basic knowledge of Html and Css, a browser and text editor. There is a small amount of Javascript in this article, but just in one section.
 
 # How to Build a Responsive Web Page
-This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap, Sitecore, SXA, React, and Angular to learn how those technologies impact our implementation.
+This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap, Sitecore SXA, React, and Angular to learn how those technologies impact our implementation.
 
 <br>
 
 # Tabs {.tabset}
 ## Part One - Design
-There are two major web design strategies that have been in use since the early days of responsive web sites.
+There are two major design strategies for responsive web sites.
 
-**1. Mobile-First** designs target mobile layouts first (starting with smallest mobile devices) with the goal of creating the optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences on those platforms. Mobile-first is trying to create a win-win situation for everyone.
+**1. Mobile-First Designs** target mobile layouts first (starting with smallest mobile devices) with the goal of creating an optimal mobile user experience. As more and more real-estate becomes available (tablets, laptops, and desktops) additional patterns are added to create optimal experiences at those sizes. Mobile-first is trying to create a win-win situation for everyone.
 
-**2. Desktop-First** designs target desktop layouts first (starting with largest desktop sizes) with the goal of defining all possible content that can fit on large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal or acceptable on smaller platforms and mobile devices.
+**2. Desktop-First Designs** target desktop layouts first (starting with largest desktop sizes) with the goal of defining all possible content that can fit on large platforms. As less and less real-estate becomes available (smaller desktops, laptops, tablets, and small mobile devices), content is removed and/or rearranged to fit on those platforms. With desktop-first, there's no guarantee the user experience will be optimal on smaller platforms and mobile devices.
 
-For better or worst, most of the web designs we see these days are **desktop-first**. They seem to be easier to create when people are short on budget or in a rush. I honestly can't remember the last time I encountered a true mobile-first design. Therefore, the designs below are **desktop-first**. As we proceed through the code in the sections below, we'll follow the desktop-first strategy there as well. So here we go. Here are the designs for a simple responsive site that we'll be building in Part Two:
+For better or worst, most of the designs we see today are **desktop-first**. They seem to be easier to create when people are short on time or budget. Here are the desktop-first designs for the page we'll be coding in Part Two:
 
 <br>
 
@@ -54,7 +54,7 @@ For better or worst, most of the web designs we see these days are **desktop-fir
 <br>
 
 ## Part Two - Coding
-In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three, we'll learn how technologies like Bootstrap, Angular, and React impact what we're building here.
+In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three, we'll learn how other technologies like Bootstrap, Sitecore SXA, Angular, and React impact what we're building here.
 
 <br>
 
@@ -68,7 +68,7 @@ So let's begin. If you want to follow along, create a new text file named `wiref
 > The code listings below can be copy/pasted. Hover over the code. You should see a `Copy` button appear in the upper-right corner of the listing.
 {.is-info}
 
-Here is the HTML version of Hello World. This is bare minimum for any web page. If you have a look at this in your browser, you should see the word **Wireframe** on an empty page. The most important part is line number `5` below. This meta tag is required on every page that needs responsive coding.
+Here is the HTML version of Hello World. This is the bare minimum for any responsive web page. If you have a look at this in your browser, you should see the word **Wireframe** on an empty page. The most important part is line number `5` below. This meta tag is required on every page that needs responsive coding.
 
 ```html
 <!DOCTYPE html>

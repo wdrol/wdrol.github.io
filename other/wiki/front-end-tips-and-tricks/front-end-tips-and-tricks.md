@@ -81,14 +81,14 @@ https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 **Bootstrap Container Classes**
 
-Bootstrap has two container classes: `container` and `container-fluid` but some developers, including Sitecore developers, often misuse them. In general, you should only need to use `container` or `container-fluid` **once per page** at a very high level in the dom hierarchy. Use `container-fluid` when you need to support full-width, edge-to-edge designs. Use `container` when you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
+Bootstrap has two container classes: `container` and `container-fluid.` Many developers completely misuse them. In general, you should only need to use them **once per page** at a very high level in the dom hierarchy. Use `container-fluid` when you need to support full-width, edge-to-edge designs. Use `container` when you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
 
 <br>
 <hr>
 
 **Bootstrap Utility Classes**
 
-Some developers, including front-end developers, forget that Bootstrap is much more than a responsive grid system. As such, they tend to overuse the grid, often in situations where a grid is not even necessary. There is a large number of responsive utility classes to easily handle tedious CSS tasks (without using the grid and without adding custom CSS or media queries to your code).
+Bootstrap is more than a responsive grid system. Developers tend to overuse the Bootstrap grid, often in situations where a grid is not even necessary. There is a large number of responsive utility classes to easily handle tedious CSS tasks (without using the grid and without adding custom CSS or media queries to your code).
 
 Example:
 

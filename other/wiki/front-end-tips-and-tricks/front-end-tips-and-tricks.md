@@ -36,9 +36,16 @@ https://lifehacker.com/start-a-simple-web-server-from-any-directory-on-your-ma-4
 <br>
 <hr>
 
-**Topic Name**
+**Sitecore Admin Password Reset**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+Not front-end, but I've needed this on several projects. Sometimes we need to restore somebody else's core database, so the sitecore admin password probably changes. To set it back to `admin/b`, run the following SQL script against the core database:
+
+```
+UPDATE [aspnet_Membership]
+SET Password='qOvF8m8F2IcWMvfOBjJYHmfLABc='
+WHERE UserId IN (SELECT UserId FROM [aspnet_Users]
+WHERE UserName = 'sitecore\Admin')
+```
 
 <br>
 <hr>

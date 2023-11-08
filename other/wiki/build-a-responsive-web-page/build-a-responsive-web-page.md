@@ -2406,12 +2406,12 @@ The last step is to remove all remaining `wire` classes. There are only two of t
 ## Part Three - Enhancements
 > Work in Progress...
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+Here in Part Three, we'll cleanup the files from Part Two and discuss enhancements like content management systems, front-end frameworks, and application frameworks.
 
 <br>
 
 ### Cleanup for Web Server
-In Part Two, we had a small number of files inside a single folder. On a real website, we'll have many files and folders. To start with, let's rename the file named `detail.html` to `index.html`. This file is often used as the website's default document (normally the home page). Let's also add folders for `images`, `scripts`, and `styles`. We can cut and paste the styles and scripts directly from our `index.html` document into two new files named `website.css` and `website.js`. Here's what it should look like now:
+In Part Two, we had a small number of files inside a single folder. On a real website, we'll have many files and folders. To start with, let's rename `detail.html` to `index.html`. This file is often used as the website's default document (normally the home page). Let's also add folders for `images`, `scripts`, and `styles`. We can cut and paste the styles and scripts directly from our `index.html` document into two new files named `website.css` and `website.js`. Here's what it should look like now:
 
 ![cleanup-01.png](/solutions/development/build-a-responsive-web-page/cleanup-01.png)
 

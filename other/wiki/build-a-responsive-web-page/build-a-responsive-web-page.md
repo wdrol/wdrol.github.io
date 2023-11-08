@@ -1,7 +1,7 @@
 > **Prerequisites** basic knowledge of Html and Css, a browser and text editor. There is a small amount of Javascript in this article, but just in one section.
 
 # How to Build a Responsive Web Page
-This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap, Sitecore SXA, React, and Angular to learn how those technologies impact our implementation.
+This is a deep-dive on how to build a responsive web page from scratch. In Parts One and Two below, we'll keep it technology-agnostic and focus solely on the Html and Css. In Part Three, we'll add in extras like Bootstrap and Content Management Systems (CMS) to learn how those technologies impact our implementation.
 
 <br>
 
@@ -54,7 +54,7 @@ For better or worst, most of the designs we see today are **desktop-first**. The
 <br>
 
 ## Part Two - Coding
-In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three, we'll learn how other technologies like Bootstrap, Sitecore SXA, Angular, and React impact what we're building here.
+In this part, we're going to focus solely on the Html and Css building blocks. We might need a little bit of Javascript too, but it will be minimal. In Part Three, we'll learn how other technologies like Bootstrap and Content Management Systems (CMS) impact what we're building here.
 
 <br>
 
@@ -763,11 +763,6 @@ Give it a try. When you click the mobile menu button, it should now show and hid
 </body>
 </html>
 ```
-
-<br>
-
-> Btw, React and Angular excel at interactive behaviors. Without them, we have to write the code manually to handle interactions like above. We'll take a look at Angular and React in Part Three.
-{.is-info}
 
 <br>
 
@@ -2406,7 +2401,7 @@ The last step is to remove all remaining `wire` classes. There are only two of t
 ## Part Three - Enhancements
 > Work in Progress...
 
-Here in Part Three, we cleanup the files from Part Two and discuss enhancements like front-end frameworks, content management systems, and application frameworks.
+Here in Part Three, we cleanup the files from Part Two and discuss enhancements such as front-end frameworks and content management systems.
 
 <br>
 
@@ -2421,7 +2416,7 @@ In Part Two, we had a small number of files inside a single folder. On a real we
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Detail</title>
+    <title>Index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./styles/website.css" rel="stylesheet" />
 </head>
@@ -2819,7 +2814,395 @@ Use bootstrap's utilities px-3 py-4 my-3 mx-1 me-3 pt-3 mb-3 to eliminate some c
 
 Use bootstrap's utilities d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 gap-4 gap-md-5 to eliminate some css.
 
+After Bootstrap, we no longer need the following css (144 lines and 4 media queries eliminated):
 
+```css
+.flex-space-between
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-centered
+{
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@ media( max-width: 768px )
+{
+    .footer-links
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-links > div
+    {
+        margin-bottom: 30px;
+    }
+}
+
+.center { text-align: center; }
+
+header .mobile  { display: none;  }
+header .desktop { display: block; }
+
+@ media( max-width: 991px )
+{
+    header .mobile  { display: block; }
+    header .desktop { display: none;  }
+}
+
+.mobile-menu-content
+{
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    border: none;
+    overflow: hidden;
+    will-change: all;
+    margin-bottom: 0;
+    transition: all 400ms;
+}
+
+.mobile-menu-content.expanded
+{
+    opacity: 1;
+    height: unset;
+}
+
+footer .footer-links a
+{
+    margin: 12px 0;
+    display: block;
+}
+
+.social , .copyright
+{
+    margin: 20px 0;
+}
+
+.social a
+{
+    margin: 0 6px;
+}
+
+@ media( max-width: 1420px )
+{
+    header , main , footer
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.desktop .primary-menu-links a
+{
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.desktop .primary-menu-links a:last-child
+{
+    margin-right: 0;
+}
+
+.mobile .primary-menu-links a
+{
+    display: block;
+    margin: 12px 0;
+    margin-right: 0;
+}
+
+@ media( max-width: 500px )
+{
+    .mobile .cta-button
+    {
+        display: none;
+    }
+}
+
+.search
+{
+    text-align: right;
+}
+
+.search a
+{
+    margin-right: 20px;
+}
+
+.pt-20
+{
+    padding-top: 20px;
+}
+
+.mb-10
+{
+    margin-bottom: 10px;
+}
+
+.mb-20
+{
+    margin-bottom: 20px;
+}
+
+margin: 0;
+padding: 20px 0;
+padding: 40px 0 25px 0;
+
+.wire
+{
+    padding: 20px 30px;
+    margin-bottom: 20px; 
+    border: 2px dashed #ccc;
+}
+```
+
+After Bootstrap, we no longer need the following `website.js` file (15 lines eliminated):
+
+```js
+document.addEventListener( 'DOMContentLoaded' , function()
+{
+    const button  = document.getElementsByClassName( 'mobile-menu-button'  )
+    const content = document.getElementsByClassName( 'mobile-menu-content' )
+
+    //----- Handle mobile menu button clicks.
+    if ( button.length > 0 && content.length > 0 )
+    {
+        button[0].addEventListener( 'click' , function()
+        {
+            //----- Toggle mobile menu content.
+            content[0].classList.toggle( 'expanded' )
+        })
+    }
+})
+```
+
+After Bootstrap, here is the final CSS (went from 243 lines to 99 lines):
+
+```css
+body
+{
+    margin: 0;
+    font-size: 18px;
+    background: #d9fff4;
+    font-family: sans-serif;
+}
+
+h1
+{
+    font-size: 24px;
+}
+
+.max-content-width
+{
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.mobile-menu-button
+{
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a
+{
+    color: #555;
+    text-decoration: underline;
+}
+
+.logo
+{
+    height: auto;
+    max-width: 200px;
+    text-decoration: none;
+}
+
+header , footer
+{
+    background: #d9fff4;
+}
+
+header
+{
+    border-bottom: 1px solid #888;
+}
+
+footer
+{
+    border-top: 1px solid #888;
+}
+
+main
+{
+    background: white;
+}
+
+.social img
+{
+    width: auto;
+    opacity: .75;
+    max-height: 40px;
+    will-change: opacity;
+    transition: opacity 400ms;
+}
+
+.social img:hover
+{
+    opacity: 1;
+}
+
+.copyright
+{
+    color: #555;
+    font-size: 14px;
+}
+
+.cta-button
+{
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #a55b9a;
+    text-transform: uppercase;
+}
+
+.search input[type=text]
+{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #888;
+}
+```
+
+After Bootstrap, here is the final HTML:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/website.css">
+</head>
+
+<body>
+    <header class="px-3 py-4">
+        <div class="max-content-width">
+            <div class="desktop d-none d-lg-block">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
+                    <div class="search text-right">
+                        <a class="me-4" href="#">Account</a>
+                        <a class="me-4" href="#">Sign In</a>
+                        <input type="text" placeholder="Search:" name="q" />
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="primary-menu-links">
+                        <a class="me-4" href="#">Home</a>
+                        <a class="me-4" href="#">About Us</a>
+                        <a class="me-4" href="#">Contact Us</a>
+                        <a class="me-4" href="#">Our Services</a>
+                        <a class="me-4" href="#">Our Locations</a>
+                        <a class="me-4" href="#">For Contractors</a>
+                    </div>
+                    <button class="cta-button">CTA Button</button>
+                </div>
+            </div>
+            <div class="mobile d-block d-lg-none">
+                <div class="d-flex align-items-center justify-content-between">
+                    <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
+                    <a class="mobile-menu-button" data-bs-toggle="collapse" href="#mobile-menu-content-id" role="button" aria-expanded="false" aria-controls="collapseExample">Menu</a>
+                </div>
+                <div class="mobile-menu-content collapse" id="mobile-menu-content-id">
+                    <div class="d-flex align-items-center justify-content-center gap-4 pt-3 mb-3">
+                        <button class="cta-button d-none d-sm-inline">CTA Button</button>
+                        <div class="search text-right">
+                            <input type="text" placeholder="Search:" name="q" />
+                        </div>
+                    </div>
+                    <div class="primary-menu-links text-center">
+                        <div class="my-2"><a href="#">Home</a></div>
+                        <div class="my-2"><a href="#">About Us</a></div>
+                        <div class="my-2"><a href="#">Contact Us</a></div>
+                        <div class="my-2"><a href="#">Our Services</a></div>
+                        <div class="my-2"><a href="#">Our Locations</a></div>
+                        <div class="my-2"><a href="#">For Contractors</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-3 py-4">
+        <div class="max-content-width">
+            <h1>About Us</h1>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+        </div>
+    </main>
+
+    <footer class="px-3 py-4">
+        <div class="max-content-width">
+            <div class="footer-links d-flex flex-column flex-md-row align-items-center justify-content-center gap-2 gap-md-5 text-center text-md-start">
+                <div>
+                    <div class="my-2"><a href="#">Our Partners</a></div>
+                    <div class="my-2"><a href="#">Our Supporters</a></div>
+                    <div class="my-2"><a href="#">Foundation Members</a></div>
+                    <div class="my-2"><a href="#">Additional Group Features</a></div>
+                    <div class="my-2"><a href="#">Member Portal and Benefits</a></div>
+                </div>
+                <div>
+                    <div class="my-2"><a href="#">New for this Year</a></div>
+                    <div class="my-2"><a href="#">Privacy Information</a></div>
+                    <div class="my-2"><a href="#">Changes from Last Year</a></div>
+                    <div class="my-2"><a href="#">Roadmap and Announcements</a></div>
+                    <div class="my-2"><a href="#">Disclosures and Regulations</a></div>
+                </div>
+            </div>
+            <div class="social text-center my-3">
+                <a class="mx-1" href="#"><img src="images/social-linkedin.png" alt="linkedin" title="linkedin" /></a>
+                <a class="mx-1" href="#"><img src="images/social-youtube.png"  alt="youtube"  title="youtube"  /></a>
+                <a class="mx-1" href="#"><img src="images/social-facebook.png" alt="facebook" title="facebook" /></a>
+            </div>
+            <div class="copyright text-center my-3">&copy;2023 Copyright Information. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
 
 <br>
 
@@ -2830,8 +3213,3 @@ Use bootstrap's utilities d-flex flex-column flex-md-row align-items-center just
 {.is-info}
 
 <br>
-
-
-### Application Frameworks
-
-**Angular and React** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.

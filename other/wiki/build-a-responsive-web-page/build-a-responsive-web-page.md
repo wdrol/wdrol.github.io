@@ -2406,7 +2406,7 @@ The last step is to remove all remaining `wire` classes. There are only two of t
 ## Part Three - Enhancements
 > Work in Progress...
 
-Here in Part Three, we'll cleanup the files from Part Two and discuss enhancements like content management systems, front-end frameworks, and application frameworks.
+In Part Three, we'll cleanup the files from Part Two and discuss enhancements like front-end frameworks, content management systems, and application frameworks.
 
 <br>
 
@@ -2803,6 +2803,12 @@ document.addEventListener( 'DOMContentLoaded' , function()
 
 <br>
 
+### Front-End Frameworks
+
+**Bootstrap** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+
+<br>
+
 ### Content Management Systems
 **Sitecore and SXA** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -2811,11 +2817,6 @@ document.addEventListener( 'DOMContentLoaded' , function()
 
 <br>
 
-### Front-End Frameworks
-
-**Bootstrap** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
-
-<br>
 
 ### Application Frameworks
 

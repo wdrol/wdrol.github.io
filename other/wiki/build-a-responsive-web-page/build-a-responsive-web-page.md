@@ -2822,7 +2822,7 @@ It's not necessary to understand what all of those classes mean right now. Docum
 
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
-We'll also be using Bootstrap's `collapse` feature to replace the custom code used to expand and collapse the mobile menu content. The collapse documentation is here:
+We'll also be using Bootstrap's `collapse` feature to replace our existing mobile menu content behavior. The collapse documentation is here:
 
 https://getbootstrap.com/docs/5.3/components/collapse/
 
@@ -2975,7 +2975,7 @@ padding: 40px 0 25px 0;
 }
 ```
 
-After Bootstrap, we no longer need the following `website.js` file either (15 lines eliminated):
+After Bootstrap, we no longer need the `website.js` file either (15 lines eliminated):
 
 ```js
 document.addEventListener( 'DOMContentLoaded' , function()
@@ -2995,7 +2995,7 @@ document.addEventListener( 'DOMContentLoaded' , function()
 })
 ```
 
-After Bootstrap, here is the final CSS (went from 243 lines down to 99 lines):
+After Bootstrap, here is the finished `website.css` file (went from 243 lines down to 99 lines):
 
 ```css
 body
@@ -3099,7 +3099,7 @@ main
 }
 ```
 
-After Bootstrap, here is the final HTML. See if you can spot where the new Bootstrap classes are.
+After Bootstrap, here is the finished `index.html` file. See if you can spot where the new Bootstrap classes are.
 
 ```html
 <!DOCTYPE html>
@@ -3218,7 +3218,7 @@ After Bootstrap, here is the final HTML. See if you can spot where the new Boots
 
 <br>
 
-> So why didn't we just start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any frameworks. Only then can we appreciate how much work a front-end framework can actually save us.
+> So why didn't we start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any frameworks. Only then can we appreciate how much coding a front-end framework can actually save us.
 {.is-info}
 
 <br>

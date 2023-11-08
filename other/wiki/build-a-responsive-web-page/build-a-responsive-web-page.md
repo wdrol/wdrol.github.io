@@ -2802,19 +2802,31 @@ document.addEventListener( 'DOMContentLoaded' , function()
 
 Front-end frameworks like Bootstrap, Foundation, and Tailwind provide a core library of common front-end styles and patterns to help accelerate responsive web development. While each has its own proprietary syntax, they all help us write less CSS and JS code from scratch.
 
-In this example, we're going to add `Bootstrap 5.3` classes to our existing HTML. By using Bootstrap classes, we can eliminate many of our existing styles and javascript. Here are some of the Bootstrap classes we'll be using:
+In this example, we're going to add `Bootstrap 5.3` classes to our existing HTML. In doing so, we can eliminate a surprising amount of our existing styles and javascript. Here are some of the Bootstrap classes we'll be using:
 
-text-right, text-center, text-md-start, d-none, d-sm-inline, d-lg-block, px-3, py-4, my-3, mx-1, me-3, pt-3, mb-3, d-flex, flex-column, flex-md-row, align-items-center, justify-content-between, gap-2, gap-4, and gap-md-5.
+```
+gap-2, gap-md-5 
 
-It's not necessary to understand what all of those classes mean right now. Full documentation can be found at:
+justify-content-between
+
+text-right, text-center, text-start
+
+d-none, d-sm-inline, d-lg-block, d-flex
+
+px-3, py-4, my-3, mx-1, me-3, pt-3, mb-3
+
+flex-column, flex-md-row, align-items-center
+```
+
+It's not necessary to understand what all of those classes mean right now. Documentation is at:
 
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
-We'll also be using Bootstrap's collapse feature to replace the custom code used to expand and collapse the mobile menu content. The collapse documentation is here:
+We'll also be using Bootstrap's `collapse` feature to replace the custom code used to expand and collapse the mobile menu content. The collapse documentation is here:
 
 https://getbootstrap.com/docs/5.3/components/collapse/
 
-To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we'll no longer need the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that we don't need anymore (but it's a valuable learning exercise to know how to build responsive web pages without any frameworks first).
+To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we **no longer need** the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that can be deleted:
 
 ```css
 .flex-space-between
@@ -3087,7 +3099,7 @@ main
 }
 ```
 
-After Bootstrap, here is the final HTML. See if you can see where the new Bootstrap classes are.
+After Bootstrap, here is the final HTML. See if you can spot where the new Bootstrap classes are.
 
 ```html
 <!DOCTYPE html>
@@ -3203,6 +3215,13 @@ After Bootstrap, here is the final HTML. See if you can see where the new Bootst
 </body>
 </html>
 ```
+
+<br>
+
+> So why didn't we just start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any frameworks. Only then can we appreciate how much work a front-end framework can actually save us.
+{.is-info}
+
+<br>
 
 **Bootstrap Utility Classes**
 

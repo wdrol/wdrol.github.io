@@ -2814,7 +2814,7 @@ We'll also be using Bootstrap's collapse feature to replace the custom code used
 
 https://getbootstrap.com/docs/5.3/components/collapse/
 
-To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we'll no longer need the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that we don't need anymore (but it's a valuable learning exercise to know how to build responsive web pages first, without any frameworks).
+To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we'll no longer need the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that we don't need anymore (but it's a valuable learning exercise to know how to build responsive web pages without any frameworks first).
 
 ```css
 .flex-space-between

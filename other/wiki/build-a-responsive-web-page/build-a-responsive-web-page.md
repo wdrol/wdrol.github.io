@@ -2800,21 +2800,21 @@ document.addEventListener( 'DOMContentLoaded' , function()
 
 ### Front-End Frameworks
 
-**Bootstrap** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+Front-end frameworks like Bootstrap, Foundation, and Tailwind provide a core library of common front-end styles and patterns to help accelerate responsive web development. While each has its own proprietary syntax, they all help us write less CSS and JS code from scratch.
 
-Use bootstrap's collapse feature to eliminate some css and our custom js (website.js):
+In this example, we're going to add `Bootstrap 5.3` classes to our existing HTML. By using Bootstrap classes, we can eliminate many of our existing styles and javascript. Here are some of the Bootstrap classes we'll be using:
+
+text-right, text-center, text-md-start, d-none, d-sm-inline, d-lg-block, px-3, py-4, my-3, mx-1, me-3, pt-3, mb-3, d-flex, flex-column, flex-md-row, align-items-center, justify-content-between, gap-2, gap-4, and gap-md-5.
+
+It's not necessary to understand what all of those classes mean right now. Full documentation can be found at:
+
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+We'll also be using Bootstrap's collapse feature to replace the custom code used to expand and collapse the mobile menu content. The collapse documentation is here:
 
 https://getbootstrap.com/docs/5.3/components/collapse/
 
-Use bootstrap's text-right text-center text-md-start to eliminate some css.
-
-Use bootstrap's utilities d-none d-sm-inline d-lg-block to eliminate some css.
-
-Use bootstrap's utilities px-3 py-4 my-3 mx-1 me-3 pt-3 mb-3 to eliminate some css.
-
-Use bootstrap's utilities d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 gap-4 gap-md-5 to eliminate some css.
-
-After Bootstrap, we no longer need the following css (144 lines and 4 media queries eliminated):
+To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we'll no longer need the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that we don't need anymore (but it's a valuable learning exercise to know how to build responsive web pages first, without any frameworks).
 
 ```css
 .flex-space-between
@@ -2963,7 +2963,7 @@ padding: 40px 0 25px 0;
 }
 ```
 
-After Bootstrap, we no longer need the following `website.js` file (15 lines eliminated):
+After Bootstrap, we no longer need the following `website.js` file either (15 lines eliminated):
 
 ```js
 document.addEventListener( 'DOMContentLoaded' , function()
@@ -2983,7 +2983,7 @@ document.addEventListener( 'DOMContentLoaded' , function()
 })
 ```
 
-After Bootstrap, here is the final CSS (went from 243 lines to 99 lines):
+After Bootstrap, here is the final CSS (went from 243 lines down to 99 lines):
 
 ```css
 body
@@ -3087,7 +3087,7 @@ main
 }
 ```
 
-After Bootstrap, here is the final HTML:
+After Bootstrap, here is the final HTML. See if you can see where the new Bootstrap classes are.
 
 ```html
 <!DOCTYPE html>
@@ -3203,6 +3203,39 @@ After Bootstrap, here is the final HTML:
 </body>
 </html>
 ```
+
+**Bootstrap Utility Classes**
+
+Bootstrap is more than a responsive grid system. Most of the classes we used above are utility classes. Developers tend to overuse the Bootstrap grid, often in situations where a grid is not even necessary (we didn't need the Bootstrap grid in our example). There is a large number of Bootstrap responsive utility classes to easily handle tedious CSS tasks:
+
+For example:
+
+```html
+<div class="mx-3 mx-md-5 px-3 px-md-5">Example Line</div>
+```
+
+| Class   | Description                                                     |
+|---------|-----------------------------------------------------------------|
+| mx-3    | sets level 3 horizontal margin on all devices                   |
+| mx-md-5 | sets level 5 horizontal margin at the md breakpoint and higher  |
+| px-3    | sets level 3 horizontal padding on all devices                  |
+| px-md-5 | sets level 5 horizontal padding at the md breakpoint and higher |
+
+https://getbootstrap.com/docs/5.3/layout/utilities/
+
+https://getbootstrap.com/docs/5.3/utilities/display/
+
+https://getbootstrap.com/docs/5.3/utilities/flex/
+
+https://getbootstrap.com/docs/5.3/utilities/spacing/
+
+https://getbootstrap.com/docs/5.3/utilities/visibility/
+
+<br>
+
+**Bootstrap Container Classes**
+
+Bootstrap has two container classes: `container` and `container-fluid.` Many developers completely misuse them (we didn't need either of these classes in our example). In general, you should only need to use them **once per page** at a very high level in the dom hierarchy. Use `container-fluid` when you need to support full-width, edge-to-edge designs. Use `container` when you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
 
 <br>
 

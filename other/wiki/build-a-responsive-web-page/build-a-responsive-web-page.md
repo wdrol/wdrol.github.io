@@ -2807,6 +2807,20 @@ document.addEventListener( 'DOMContentLoaded' , function()
 
 **Bootstrap** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
+Use bootstrap's collapse feature to eliminate some css and our custom js (website.js):
+
+https://getbootstrap.com/docs/5.3/components/collapse/
+
+Use bootstrap's text-right text-center text-md-start to eliminate some css.
+
+Use bootstrap's utilities d-none d-sm-inline d-lg-block to eliminate some css.
+
+Use bootstrap's utilities px-3 py-4 my-3 mx-1 me-3 pt-3 mb-3 to eliminate some css.
+
+Use bootstrap's utilities d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 gap-4 gap-md-5 to eliminate some css.
+
+
+
 <br>
 
 ### Content Management Systems

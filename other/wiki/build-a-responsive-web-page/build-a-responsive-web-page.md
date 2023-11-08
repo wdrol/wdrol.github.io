@@ -2570,7 +2570,7 @@ h1
     justify-content: center;
 }
 
-@media( max-width: 768px )
+@ media( max-width: 768px )
 {
     .footer-links
     {
@@ -2595,7 +2595,7 @@ h1
 header .mobile  { display: none;  }
 header .desktop { display: block; }
 
-@media( max-width: 991px )
+@ media( max-width: 991px )
 {
     header .mobile  { display: block; }
     header .desktop { display: none;  }
@@ -2700,7 +2700,7 @@ main
     font-size: 14px;
 }
 
-@media( max-width: 1420px )
+@ media( max-width: 1420px )
 {
     header , main , footer
     {
@@ -2739,7 +2739,7 @@ main
     text-transform: uppercase;
 }
 
-@media( max-width: 500px )
+@ media( max-width: 500px )
 {
     .mobile .cta-button
     {

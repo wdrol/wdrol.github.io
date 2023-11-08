@@ -2411,7 +2411,395 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br>
 
 ### Cleanup for Web Server
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+In Part Two, we had a small number of files inside a single folder. On a real website, we'll have many files and folders. To start with, let's rename the file named `detail.html` to `index.html`. This file is often used as the website's default document (normally the home page). Let's also add folders for `images`, `scripts`, and `styles`. We can cut and paste the styles and scripts directly from our `index.html` document into two new files named `website.css` and `website.js`. Here's what it should look like now:
+
+![cleanup-01.png](/solutions/development/build-a-responsive-web-page/cleanup-01.png)
+
+**Index.html**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./styles/website.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="max-content-width">
+            <div class="desktop">
+                <div class="flex-space-between mb-10">
+                    <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
+                    <div class="search">
+                        <a href="#">Account</a>
+                        <a href="#">Sign In</a>
+                        <input type="text" placeholder="Search:" name="q" />
+                    </div>
+                </div>
+                <div class="flex-space-between">
+                    <div class="primary-menu-links">
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Our Services</a>
+                        <a href="#">Our Locations</a>
+                        <a href="#">For Contractors</a>
+                    </div>
+                    <button class="cta-button">CTA Button</button>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="flex-space-between">
+                    <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
+                    <div class="mobile-menu-button">Menu</div>
+                </div>
+                <div class="mobile-menu-content">
+                    <div class="flex-centered pt-20 mb-20">
+                        <button class="cta-button">CTA Button</button>
+                        <div class="search">
+                            <input type="text" placeholder="Search:" name="q" />
+                        </div>
+                    </div>
+                    <div class="primary-menu-links center">
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Our Services</a>
+                        <a href="#">Our Locations</a>
+                        <a href="#">For Contractors</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="max-content-width">
+            <h1>About Us</h1>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+            <p>
+                ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed,
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim minima
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+                commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo voluptas.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="max-content-width">
+            <div class="footer-links flex-centered">
+                <div>
+                    <div><a href="#">Our Partners</a></div>
+                    <div><a href="#">Our Supporters</a></div>
+                    <div><a href="#">Foundation Members</a></div>
+                    <div><a href="#">Additional Group Features</a></div>
+                    <div><a href="#">Member Portal and Benefits</a></div>
+                </div>
+                <div>
+                    <div><a href="#">New for this Year</a></div>
+                    <div><a href="#">Privacy Information</a></div>
+                    <div><a href="#">Changes from Last Year</a></div>
+                    <div><a href="#">Roadmap and Announcements</a></div>
+                    <div><a href="#">Disclosures and Regulations</a></div>
+                </div>
+            </div>
+            <div class="social center">
+                <a href="#"><img src="images/social-linkedin.png" alt="linkedin" title="linkedin" /></a>
+                <a href="#"><img src="images/social-youtube.png"  alt="youtube"  title="youtube"  /></a>
+                <a href="#"><img src="images/social-facebook.png" alt="facebook" title="facebook" /></a>
+            </div>
+            <div class="copyright center">&copy;2023 Copyright Information. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="./scripts/website.js"></script>
+</body>
+</html>
+```
+
+**Website.css**
+
+```css
+body
+{
+    margin: 0;
+    font-size: 18px;
+    background: #d9fff4;
+    font-family: sans-serif;
+}
+
+.wire
+{
+    padding: 20px 30px;
+    margin-bottom: 20px; 
+    border: 2px dashed #ccc;
+}
+
+h1
+{
+    margin: 0;
+    font-size: 24px;
+}
+
+.flex-space-between
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-centered
+{
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media( max-width: 768px )
+{
+    .footer-links
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-links > div
+    {
+        margin-bottom: 30px;
+    }
+}
+
+.max-content-width
+{
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.center { text-align: center; }
+
+header .mobile  { display: none;  }
+header .desktop { display: block; }
+
+@media( max-width: 991px )
+{
+    header .mobile  { display: block; }
+    header .desktop { display: none;  }
+}
+
+.mobile-menu-button
+{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.mobile-menu-content
+{
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    border: none;
+    overflow: hidden;
+    will-change: all;
+    margin-bottom: 0;
+    transition: all 400ms;
+}
+
+.mobile-menu-content.expanded
+{
+    opacity: 1;
+    height: unset;
+}
+
+a
+{
+    color: #555;
+    text-decoration: underline;
+}
+
+footer .footer-links a
+{
+    margin: 12px 0;
+    display: block;
+}
+
+.logo
+{
+    height: auto;
+    max-width: 200px;
+    text-decoration: none;
+}
+
+header , footer
+{
+    padding: 20px 0;
+    background: #d9fff4;
+}
+
+header
+{
+    border-bottom: 1px solid #888;
+}
+
+footer
+{
+    border-top: 1px solid #888;
+}
+
+main
+{
+    background: white;
+}
+
+main
+{
+    padding: 40px 0 25px 0;
+}
+
+.social , .copyright
+{
+    margin: 20px 0;
+}
+
+.social a
+{
+    margin: 0 6px;
+}
+
+.social img
+{
+    width: auto;
+    opacity: .75;
+    max-height: 40px;
+    will-change: opacity;
+    transition: opacity 400ms;
+}
+
+.social img:hover
+{
+    opacity: 1;
+}
+
+.copyright
+{
+    color: #555;
+    font-size: 14px;
+}
+
+@media( max-width: 1420px )
+{
+    header , main , footer
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.desktop .primary-menu-links a
+{
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.desktop .primary-menu-links a:last-child
+{
+    margin-right: 0;
+}
+
+.mobile .primary-menu-links a
+{
+    display: block;
+    margin: 12px 0;
+    margin-right: 0;
+}
+
+.cta-button
+{
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #a55b9a;
+    text-transform: uppercase;
+}
+
+@media( max-width: 500px )
+{
+    .mobile .cta-button
+    {
+        display: none;
+    }
+}
+
+.search
+{
+    text-align: right;
+}
+
+.search a
+{
+    margin-right: 20px;
+}
+
+.search input[type=text]
+{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #888;
+}
+
+.pt-20
+{
+    padding-top: 20px;
+}
+
+.mb-10
+{
+    margin-bottom: 10px;
+}
+
+.mb-20
+{
+    margin-bottom: 20px;
+}
+```
+
+**Website.js**
+
+```js
+document.addEventListener( 'DOMContentLoaded' , function()
+{
+    const button  = document.getElementsByClassName( 'mobile-menu-button'  )
+    const content = document.getElementsByClassName( 'mobile-menu-content' )
+
+    //----- Handle mobile menu button clicks.
+    if ( button.length > 0 && content.length > 0 )
+    {
+        button[0].addEventListener( 'click' , function()
+        {
+            //----- Toggle mobile menu content.
+            content[0].classList.toggle( 'expanded' )
+        })
+    }
+})
+```
 
 <br>
 

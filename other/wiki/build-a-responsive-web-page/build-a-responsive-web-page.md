@@ -2800,9 +2800,7 @@ document.addEventListener( 'DOMContentLoaded' , function()
 
 ### Front-End Frameworks
 
-Front-end frameworks like Bootstrap, Foundation, and Tailwind provide a core library of common front-end styles and patterns to help accelerate responsive web development. While each has its own proprietary syntax, they all help us write less CSS and JS code from scratch.
-
-In this example, we're going to add `Bootstrap 5.3` classes to our existing HTML. In doing so, we can eliminate a surprising amount of our existing styles and javascript. Here are some of the Bootstrap classes we'll be using:
+Front-end frameworks like Bootstrap, Foundation, and Tailwind provide a core library of common front-end styles and patterns to help accelerate responsive web development. While each has its own proprietary syntax, they all help us write less CSS and JS code from scratch. In this example, we're going to add `Bootstrap 5.3` classes to our HTML. In doing so, we can eliminate a surprising amount of existing styles and javascript. Here are some of the Bootstrap classes we'll be using:
 
 ```
 gap-2, gap-md-5 
@@ -3099,7 +3097,7 @@ main
 }
 ```
 
-After Bootstrap, here is the finished `index.html` file. See if you can spot where the new Bootstrap classes are.
+After Bootstrap, here is the finished `index.html` file. Can you spot where the new Bootstrap classes are?
 
 ```html
 <!DOCTYPE html>

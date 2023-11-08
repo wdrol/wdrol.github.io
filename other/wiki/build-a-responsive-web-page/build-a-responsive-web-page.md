@@ -2406,7 +2406,7 @@ The last step is to remove all remaining `wire` classes. There are only two of t
 ## Part Three - Enhancements
 > Work in Progress...
 
-In Part Three, we'll cleanup the files from Part Two and discuss enhancements like front-end frameworks, content management systems, and application frameworks.
+Here in Part Three, we cleanup the files from Part Two and discuss enhancements like front-end frameworks, content management systems, and application frameworks.
 
 <br>
 

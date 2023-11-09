@@ -1,47 +1,47 @@
-<!-- Start Header -->
+<!-- Start Header Markup -->
 <div class="max-content-width">
-    <div class="desktop">
-        <div class="flex-space-between mb-10">
+    <div class="desktop d-none d-lg-block">
+        <div class="d-flex align-items-center justify-content-between mb-3">
             <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
-            <div class="search">
-                <a href="#">Account</a>
-                <a href="#">Sign In</a>
+            <div class="search text-right">
+                <a class="me-4" href="#">Account</a>
+                <a class="me-4" href="#">Sign In</a>
                 <input type="text" placeholder="Search:" name="q" />
             </div>
         </div>
-        <div class="flex-space-between">
+        <div class="d-flex align-items-center justify-content-between">
             <div class="primary-menu-links">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Our Services</a>
-                <a href="#">Our Locations</a>
-                <a href="#">For Contractors</a>
+                <a class="me-4" href="#">Home</a>
+                <a class="me-4" href="#">About Us</a>
+                <a class="me-4" href="#">Contact Us</a>
+                <a class="me-4" href="#">Our Services</a>
+                <a class="me-4" href="#">Our Locations</a>
+                <a class="me-4" href="#">For Contractors</a>
             </div>
             <button class="cta-button">CTA Button</button>
         </div>
     </div>
-    <div class="mobile">
-        <div class="flex-space-between">
+    <div class="mobile d-block d-lg-none">
+        <div class="d-flex align-items-center justify-content-between">
             <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
-            <div class="mobile-menu-button">Menu</div>
+            <a class="mobile-menu-button" data-bs-toggle="collapse" href="#mobile-menu-content-id" role="button" aria-expanded="false" aria-controls="collapseExample">Menu</a>
         </div>
-        <div class="mobile-menu-content">
-            <div class="flex-centered pt-20 mb-20">
-                <button class="cta-button">CTA Button</button>
-                <div class="search">
+        <div class="mobile-menu-content collapse" id="mobile-menu-content-id">
+            <div class="d-flex align-items-center justify-content-center gap-4 pt-3 mb-3">
+                <button class="cta-button d-none d-sm-inline">CTA Button</button>
+                <div class="search text-right">
                     <input type="text" placeholder="Search:" name="q" />
                 </div>
             </div>
-            <div class="primary-menu-links center">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Our Services</a>
-                <a href="#">Our Locations</a>
-                <a href="#">For Contractors</a>
+            <div class="primary-menu-links text-center">
+                <div class="my-2"><a href="#">Home</a></div>
+                <div class="my-2"><a href="#">About Us</a></div>
+                <div class="my-2"><a href="#">Contact Us</a></div>
+                <div class="my-2"><a href="#">Our Services</a></div>
+                <div class="my-2"><a href="#">Our Locations</a></div>
+                <div class="my-2"><a href="#">For Contractors</a></div>
             </div>
         </div>
     </div>
 </div>
-<!-- End Header -->
+<!-- End Header Markup -->

@@ -3393,6 +3393,65 @@ The reality is that `header.cshtml` and `footer.cshtml` would each have their ow
 
 <br>
 
+Here is an idea of what the header and footer might look like once placeholders are inserted (again, this is NOT real placeholder syntax):
+
+```html
+<!-- Start Header Markup -->
+<div class="max-content-width">
+    <div class="desktop d-none d-lg-block">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <desktop-logo-placeholder>
+            <div class="search text-right">
+                <desktop-account-placeholder>
+                <desktop-search-placeholder>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="primary-menu-links">
+                <desktop-menu-placeholder>
+            </div>
+            <desktop-cta-placeholder>
+        </div>
+    </div>
+    <div class="mobile d-block d-lg-none">
+        <div class="d-flex align-items-center justify-content-between">
+            <mobile-logo-placeholder>
+            <mobile-menu-button-placeholder>
+        </div>
+        <div class="mobile-menu-content collapse" id="mobile-menu-content-id">
+            <div class="d-flex align-items-center justify-content-center gap-4 pt-3 mb-3">
+                <mobile-cta-placeholder>
+                <div class="search text-right">
+                    <mobile-search-placeholder>
+                </div>
+            </div>
+            <div class="primary-menu-links text-center">
+                <mobile-menu-placeholder>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header Markup -->
+
+
+<!-- Start Footer Markup -->
+<div class="max-content-width">
+    <div class="footer-links d-flex flex-column flex-md-row align-items-center justify-content-center gap-2 gap-md-5 text-center text-md-start">
+        <footer-links-1-placeholder>
+        <footer-links-2-placeholder>
+    </div>
+    <div class="social text-center my-3">
+        <footer-social-links-placeholder>
+    </div>
+    <div class="copyright text-center my-3">
+        <footer-copyright-placeholder>
+    </div>
+</div>
+<!-- End Footer Markup -->
+```
+
+<br>
+
 > Sitecore SXA uses Bootstrap as the default front-end framework. Behind the scenes, Sitecore has made some unfortunate decisions that can lead to improperly generated Bootstrap HTML. If you feel like you're in a losing battle with SXA or your designs are suffering, this how-to gives you some options: [optimize-sxa-and-bootstrap](/Solutions/Development/optimize-sxa-and-bootstrap) 
 {.is-info}
 

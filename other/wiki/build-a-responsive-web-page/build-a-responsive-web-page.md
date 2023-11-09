@@ -3261,7 +3261,136 @@ Bootstrap has two container classes: `container` and `container-fluid.` Many dev
 
 ### Content Management Systems
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+Content Management Systems (CMS) are website tools to support the separation of code and content, giving content authors the ability to manage their website and content without writing code. Systems range in complexity and price (from the excellent free Umbraco CMS to expensive products such as Sitecore Experience Manager).
+
+Even though content authors enjoy a codeless management experience, web developers are still needed to code the site in a way that is compatible with the CMS. In the case of Sitecore, one of the main techniques used to enable this is called placeholders. Placeholders allow the CMS to insert some piece of content (chosen by content authors) into some pre-defined place on the page. Other CMS products have similar mechanisms, but they might not be called placeholders in those products.
+
+This is an over-simplification, but our example file system might look something like this with a CMS:
+
+![cms-01.png](/solutions/development/build-a-responsive-web-page/cms-01.png =250x)
+
+The layout file named `main.cshtml` provides the overall code for a page. Lines `12, 17, and 22` show where the placeholders are (this is NOT real placeholder syntax). The idea is to hard-code everything that isn't likely to change, but use placeholders to support anything that will.
+
+**main.cshtml**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CMS Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/website.css">
+</head>
+
+<body>
+    <header class="px-3 py-4">
+        <header-placeholder>
+    </header>
+
+    <main class="px-3 py-4">
+        <div class="max-content-width">
+            <main-placeholder>
+        </div>
+    </main>
+
+    <footer class="px-3 py-4">
+        <footer-placeholder>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
+
+Inside the CMS, content authors can choose to put anything inside each of the placeholders in the main layout. In our example, that would mean putting `header.cshtml into <header-placeholder>` and `footer.cshtml into <footer-placeholder>`.
+
+The reality is that `header.cshtml` and `footer.cshtml` would each have their own placeholders too. For instance, the hard-coded lines `14 to 19 in header.cshtml` and lines `4 to 17 in footer.html` below would  be replaced by placeholders. Other blocks of code would be replaced by placeholders too &mdash; be sure to give each placeholder a unique name so that content renders correctly on the page.
+
+**header.cshtml**
+
+```html
+<!-- Start Header Markup -->
+<div class="max-content-width">
+    <div class="desktop d-none d-lg-block">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
+            <div class="search text-right">
+                <a class="me-4" href="#">Account</a>
+                <a class="me-4" href="#">Sign In</a>
+                <input type="text" placeholder="Search:" name="q" />
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="primary-menu-links">
+                <a class="me-4" href="#">Home</a>
+                <a class="me-4" href="#">About Us</a>
+                <a class="me-4" href="#">Contact Us</a>
+                <a class="me-4" href="#">Our Services</a>
+                <a class="me-4" href="#">Our Locations</a>
+                <a class="me-4" href="#">For Contractors</a>
+            </div>
+            <button class="cta-button">CTA Button</button>
+        </div>
+    </div>
+    <div class="mobile d-block d-lg-none">
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="#"><img class="logo" src="images/logo.png" alt="logo" /></a>
+            <a class="mobile-menu-button" data-bs-toggle="collapse" href="#mobile-menu-content-id" role="button" aria-expanded="false" aria-controls="collapseExample">Menu</a>
+        </div>
+        <div class="mobile-menu-content collapse" id="mobile-menu-content-id">
+            <div class="d-flex align-items-center justify-content-center gap-4 pt-3 mb-3">
+                <button class="cta-button d-none d-sm-inline">CTA Button</button>
+                <div class="search text-right">
+                    <input type="text" placeholder="Search:" name="q" />
+                </div>
+            </div>
+            <div class="primary-menu-links text-center">
+                <div class="my-2"><a href="#">Home</a></div>
+                <div class="my-2"><a href="#">About Us</a></div>
+                <div class="my-2"><a href="#">Contact Us</a></div>
+                <div class="my-2"><a href="#">Our Services</a></div>
+                <div class="my-2"><a href="#">Our Locations</a></div>
+                <div class="my-2"><a href="#">For Contractors</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header Markup -->
+```
+
+**footer.cshtml**
+
+```html
+<!-- Start Footer Markup -->
+<div class="max-content-width">
+    <div class="footer-links d-flex flex-column flex-md-row align-items-center justify-content-center gap-2 gap-md-5 text-center text-md-start">
+        <div>
+            <div class="my-2"><a href="#">Our Partners</a></div>
+            <div class="my-2"><a href="#">Our Supporters</a></div>
+            <div class="my-2"><a href="#">Foundation Members</a></div>
+            <div class="my-2"><a href="#">Additional Group Features</a></div>
+            <div class="my-2"><a href="#">Member Portal and Benefits</a></div>
+        </div>
+        <div>
+            <div class="my-2"><a href="#">New for this Year</a></div>
+            <div class="my-2"><a href="#">Privacy Information</a></div>
+            <div class="my-2"><a href="#">Changes from Last Year</a></div>
+            <div class="my-2"><a href="#">Roadmap and Announcements</a></div>
+            <div class="my-2"><a href="#">Disclosures and Regulations</a></div>
+        </div>
+    </div>
+    <div class="social text-center my-3">
+        <a class="mx-1" href="#"><img src="images/social-linkedin.png" alt="linkedin" title="linkedin" /></a>
+        <a class="mx-1" href="#"><img src="images/social-youtube.png"  alt="youtube"  title="youtube"  /></a>
+        <a class="mx-1" href="#"><img src="images/social-facebook.png" alt="facebook" title="facebook" /></a>
+    </div>
+    <div class="copyright text-center my-3">&copy;2023 Copyright Information. All rights reserved.</div>
+</div>
+<!-- End Footer Markup -->
+```
+
+<br>
 
 > Sitecore SXA uses Bootstrap as the default front-end framework. Behind the scenes, Sitecore has made some unfortunate decisions that can lead to improperly generated Bootstrap HTML. If you feel like you're in a losing battle with SXA or your designs are suffering, this how-to gives you some options: [optimize-sxa-and-bootstrap](/Solutions/Development/optimize-sxa-and-bootstrap) 
 {.is-info}

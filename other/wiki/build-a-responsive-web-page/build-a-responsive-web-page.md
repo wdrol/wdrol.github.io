@@ -3270,7 +3270,7 @@ This is an over-simplification, but our example file system might look something
 
 ![cms-01.png](/solutions/development/build-a-responsive-web-page/cms-01.png =250x)
 
-The layout file named `main.cshtml` provides the overall code for a page. Lines `12, 17, and 22` show where the placeholders are (this is NOT real placeholder syntax). The idea is to hard-code everything that isn't likely to change, but use placeholders to support anything that will.
+The layout file named `main.cshtml` provides the overall code for a page. Lines `12, 17, and 22` show where the placeholders are (this is NOT real placeholder syntax). The idea is to use placeholders for anything that might change, and hard-code everything else that won't likely change.
 
 **main.cshtml**
 

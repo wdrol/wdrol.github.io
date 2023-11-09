@@ -3219,7 +3219,7 @@ After Bootstrap, here is the finished `index.html` file. Can you spot where the 
 
 <br>
 
-> So why didn't we just start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any frameworks. Only then can we appreciate how much coding a front-end framework can actually save us.
+> So why didn't we just start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any supporting frameworks, then we can appreciate the actual reduction of code.
 {.is-info}
 
 <br>

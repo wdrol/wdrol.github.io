@@ -3262,7 +3262,7 @@ Bootstrap has two container classes: `container` and `container-fluid.` Many dev
 
 ### Content Management Systems
 
-Content Management Systems (CMS) are website tools to support the separation of code and content, giving content authors the ability to manage their website and content without writing code. Systems range in complexity and price (from the excellent free Umbraco CMS to expensive products such as Sitecore Experience Manager).
+Content Management Systems (CMS) are website tools to support the separation of code and content, giving content authors the ability to manage their website without writing code. Systems range in complexity and price (from the excellent free Umbraco CMS to expensive products such as Sitecore Experience Manager).
 
 Even though content authors enjoy a codeless management experience, web developers are still needed to code the site in a way that is compatible with the CMS. In the case of Sitecore, one of the main techniques used to enable this is called placeholders. Placeholders allow the CMS to insert some piece of content (chosen by content authors) into some pre-defined place on the page. Other CMS products have similar mechanisms, but they might not be called placeholders in those products.
 

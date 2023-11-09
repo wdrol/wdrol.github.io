@@ -2829,6 +2829,8 @@ https://getbootstrap.com/docs/5.3/components/collapse/
 To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we **no longer need** the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that can be deleted:
 
 ```html
+/* All of the following CSS can be deleted. */
+
 .flex-space-between
 {
     display: flex;

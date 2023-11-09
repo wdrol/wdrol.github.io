@@ -2406,9 +2406,12 @@ Here in Part Three, we cleanup the files from Part Two and discuss enhancements 
 <br>
 
 ### Cleanup for Web Server
+
 In Part Two, we had a small number of files inside a single folder. On a real website, we'll have many files and folders. To start with, let's rename `detail.html` to `index.html`. This file is often used as the website's default document (normally the home page). Let's also add folders for `images`, `scripts`, and `styles`. We can cut and paste the styles and scripts directly from our `index.html` document into two new files named `website.css` and `website.js`. Here's what it should look like now:
 
-![cleanup-01.png](/solutions/development/build-a-responsive-web-page/cleanup-01.png)
+<br>
+
+![cleanup-01.png](/solutions/development/build-a-responsive-web-page/cleanup-01.png =250x)
 
 **Index.html**
 
@@ -2528,7 +2531,7 @@ In Part Two, we had a small number of files inside a single folder. On a real we
 
 **Website.css**
 
-```css
+```html
 body
 {
     margin: 0;
@@ -2565,7 +2568,7 @@ h1
     justify-content: center;
 }
 
-@ media( max-width: 768px )
+@media( max-width: 768px )
 {
     .footer-links
     {
@@ -2590,7 +2593,7 @@ h1
 header .mobile  { display: none;  }
 header .desktop { display: block; }
 
-@ media( max-width: 991px )
+@media( max-width: 991px )
 {
     header .mobile  { display: block; }
     header .desktop { display: none;  }
@@ -2695,7 +2698,7 @@ main
     font-size: 14px;
 }
 
-@ media( max-width: 1420px )
+@media( max-width: 1420px )
 {
     header , main , footer
     {
@@ -2734,7 +2737,7 @@ main
     text-transform: uppercase;
 }
 
-@ media( max-width: 500px )
+@media( max-width: 500px )
 {
     .mobile .cta-button
     {
@@ -2816,7 +2819,7 @@ px-3, py-4, my-3, mx-1, me-3, pt-3, mb-3
 flex-column, flex-md-row, align-items-center
 ```
 
-It's not necessary to understand what all of those classes mean right now. Documentation is at:
+It's not necessary to understand what all the classes mean right now. Documentation is at:
 
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
@@ -2826,7 +2829,7 @@ https://getbootstrap.com/docs/5.3/components/collapse/
 
 To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we **no longer need** the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that can be deleted:
 
-```css
+```html
 .flex-space-between
 {
     display: flex;
@@ -2842,7 +2845,7 @@ To give you an idea of how much CSS a front-end framework like Bootstrap can eli
     justify-content: center;
 }
 
-@ media( max-width: 768px )
+@media( max-width: 768px )
 {
     .footer-links
     {
@@ -2861,7 +2864,7 @@ To give you an idea of how much CSS a front-end framework like Bootstrap can eli
 header .mobile  { display: none;  }
 header .desktop { display: block; }
 
-@ media( max-width: 991px )
+@media( max-width: 991px )
 {
     header .mobile  { display: block; }
     header .desktop { display: none;  }
@@ -2901,7 +2904,7 @@ footer .footer-links a
     margin: 0 6px;
 }
 
-@ media( max-width: 1420px )
+@media( max-width: 1420px )
 {
     header , main , footer
     {
@@ -2928,7 +2931,7 @@ footer .footer-links a
     margin-right: 0;
 }
 
-@ media( max-width: 500px )
+@media( max-width: 500px )
 {
     .mobile .cta-button
     {
@@ -3216,7 +3219,7 @@ After Bootstrap, here is the finished `index.html` file. Can you spot where the 
 
 <br>
 
-> So why didn't we start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any frameworks. Only then can we appreciate how much coding a front-end framework can actually save us.
+> So why didn't we just start with Bootstrap to begin with (way back in Part Two). It's a fair question. The best answer might be that it's a valuable learning exercise to build a responsive web page from scratch first, without any frameworks. Only then can we appreciate how much coding a front-end framework can actually save us.
 {.is-info}
 
 <br>
@@ -3257,7 +3260,8 @@ Bootstrap has two container classes: `container` and `container-fluid.` Many dev
 <br>
 
 ### Content Management Systems
-**Sitecore and SXA** - ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
 > Sitecore SXA uses Bootstrap as the default front-end framework. Behind the scenes, Sitecore has made some unfortunate decisions that can lead to improperly generated Bootstrap HTML. If you feel like you're in a losing battle with SXA or your designs are suffering, this how-to gives you some options: [optimize-sxa-and-bootstrap](/Solutions/Development/optimize-sxa-and-bootstrap) 
 {.is-info}

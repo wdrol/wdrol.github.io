@@ -3256,7 +3256,7 @@ https://getbootstrap.com/docs/5.3/utilities/visibility/
 
 **Bootstrap Container Classes**
 
-Bootstrap has two container classes: `container` and `container-fluid.` Many developers completely misuse them (we didn't need either of these classes in our example). In general, you should only need to use them **once per page** at a very high level in the dom hierarchy. Use `container-fluid` when you need to support full-width, edge-to-edge designs. Use `container` when you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
+Bootstrap has two container classes: `container` and `container-fluid.` Many developers completely misuse them (we didn't need either of these classes in our example). In general, you should only need to use one or the other **once per page** at a very high level in the dom hierarchy. Use `container-fluid` if you need to support full-width, edge-to-edge designs. Use `container` if you want Bootstrap's out-of-the-box horizontal spacing (which prevents content from crashing into the edges of small devices, while also limiting content to comfortable reading widths on larger devices and desktops).
 
 <br>
 

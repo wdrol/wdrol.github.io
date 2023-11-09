@@ -2826,7 +2826,7 @@ We'll also be using Bootstrap's `collapse` feature to replace our existing mobil
 
 https://getbootstrap.com/docs/5.3/components/collapse/
 
-To give you an idea of how much CSS a front-end framework like Bootstrap can eliminate, we **no longer need** the following css after Bootstrap. This is a reduction of 144 lines and 4 media queries that can be deleted:
+To give you an idea of how much code a front-end framework can eliminate, we **no longer need** the following CSS after Bootstrap. This is a reduction of 144 lines and 4 media queries:
 
 ```html
 /* All of the following CSS can be deleted. */

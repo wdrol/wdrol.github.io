@@ -209,6 +209,61 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <br>
 
+**The Ultimate Guide to the CSS Cascade**
+
+It doesn't get any more specific than this:
+
+https://2019.wattenberger.com/blog/css-cascade
+
+<br>
+<hr>
+
+**All About Pixels**
+
+Have you heard that pixel units (px) shouldn't be used in CSS because it breaks accessibility?
+
+https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility
+
+<br>
+<hr>
+
+**Keyframe Animations in CSS**
+
+Handy interactive guide to keyframe animations in CSS.
+
+https://www.joshwcomeau.com/animation/keyframe-animations
+
+<br>
+<hr>
+
+**Transitions in CSS**
+
+Great interactive guide to CSS transitions.
+
+https://www.joshwcomeau.com/animation/css-transitions
+
+<br>
+<hr>
+
+**Interactive Guide to Flexbox**
+
+The best interactive guide to Flexbox ever!
+
+https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+
+<br>
+<hr>
+
+**Interactive Guide to CSS Grid**
+
+
+Wonderful interactive guide for CSS Grid.
+
+https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+
+<br>
+<hr>
+
 **Take Advantage of Hardware Acceleration**
 
 Use `will-change` to make transitions smoother with hardware acceleration. On device/browser combinations that do not support it, this will simply be ignored and have no negative impact.
@@ -263,56 +318,6 @@ https://caniuse.com/css3-attr
 Sometimes we need to add decorative items onto elements (i.e. non-standard dropdown list arrows, etc.) but doing this can interfere with access to the element. Use `pointer-events: none;` to remove the interference of decorative items.
 
 https://stackoverflow.com/questions/25777599/css-after-content-below-a-select-element-causes-click-not-to-work
-
-<br>
-<hr>
-
-**The Ultimate Guide to the CSS Cascade**
-
-It doesn't get any more specific than this:
-
-https://2019.wattenberger.com/blog/css-cascade
-
-<br>
-<hr>
-
-**All About Pixels**
-
-Have you heard that pixel units (px) shouldn't be used in CSS because it breaks accessibility?
-
-https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility
-
-<br>
-<hr>
-
-**Keyframe Animations in CSS**
-
-Great interactive guide to keyframe animations in CSS.
-
-https://www.joshwcomeau.com/animation/keyframe-animations
-
-<br>
-<hr>
-
-**Transitions in CSS**
-
-Great interactive guide to CSS transitions.
-
-https://www.joshwcomeau.com/animation/css-transitions
-
-<br>
-<hr>
-
-**Topic Name**
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
-
-<br>
-<hr>
-
-**Topic Name**
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt mollit anim id est laborum.
 
 <br>
 <hr>

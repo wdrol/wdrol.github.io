@@ -209,7 +209,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <br>
 
-**The Ultimate Guide to the CSS Cascade**
+**Ultimate Guide to the CSS Cascade**
 
 It doesn't get any more specific than this:
 

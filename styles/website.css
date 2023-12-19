@@ -245,18 +245,18 @@ p
 .work-sample
 {
     opacity: 0;
-    left: -24px;
     text-align: left;
     position: relative;
     margin-bottom: 3rem;
-    will-change: left , opacity;
-    transition: left 750ms , opacity 800ms;
+    transform: translateX( -30px );
+    will-change: transform , opacity;
+    transition: transform 750ms ease-out , opacity 1600ms ease-out;
 }
 
 .work-sample.show
 {
-    left: 0;
     opacity: 1;
+    transform: translateX( 0 );
 }
 
 @media( max-width: 860px )

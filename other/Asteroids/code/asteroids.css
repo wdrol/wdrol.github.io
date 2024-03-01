@@ -1,0 +1,17 @@
+
+body
+{
+    background: #555;
+    margin-top: 50px;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.canvas-container , #canvas
+{
+    width: 800px;
+    height: 680px;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+}

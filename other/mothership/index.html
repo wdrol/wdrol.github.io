@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mothership What?</title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body
+        {
+            color: #fff;
+            display: grid;
+            min-height: 100vh;
+            place-items: center;
+            background-color: #000;
+        }
+
+        .mothership
+        {
+            height: 200px;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .podalpha
+        {
+            inset: 0;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #aaf2;
+            border: 8px solid limegreen;
+            animation: podalpha 2s infinite ease-in-out alternate;
+        }
+
+        @keyframes podalpha
+        {
+            from { corner-shape: round; }
+            to   { corner-shape: scoop; }
+        }
+
+        .podbeta {
+            inset: 20%;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #aaf2;
+            border: 8px solid limegreen;
+            animation: podbeta 2s infinite ease-in-out alternate;
+        }
+
+        @keyframes podbeta
+        {
+            from { corner-shape: bevel;  }
+            to   { corner-shape: square; }
+        }
+
+        .nope
+        {
+            gap: 1em;
+            inset: 0;
+            display: grid;
+            position: fixed;
+            place-items: center;
+            align-content: center;
+            background-color: #000e;            
+            @supports ( corner-shape: notch ) { display: none; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="mothership">
+        <div class="podalpha"></div>
+        <div class="podbeta"></div>
+    </div>
+
+    <div class="nope">
+        <h2>Yo browser aint cool.
+    </div>
+
+</body>
+</html>

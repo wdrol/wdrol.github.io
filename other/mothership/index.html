@@ -62,6 +62,24 @@
             to   { corner-shape: square; }
         }
 
+        .shields
+        {
+            inset: -5%;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            position: absolute;
+            border: 4px dashed #444;
+            background-color: transparent;
+            animation: shields 2s infinite ease-in-out alternate;
+        }
+
+        @keyframes shields
+        {
+            from { transform: rotate( -10deg ) }
+            to   { transform: rotate(  10deg ) }
+        }
+
         .nope
         {
             gap: 1em;
@@ -81,6 +99,7 @@
     <div class="mothership">
         <div class="podalpha"></div>
         <div class="podbeta"></div>
+        <div class="shields"></div>
     </div>
 
     <div class="nope">
